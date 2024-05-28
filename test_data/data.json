@@ -1,0 +1,19 @@
+{
+    "credentials" : {
+        "username" : "standard_user",
+        "password" : "secret_sauce"
+    },
+    "TC01" : {
+
+    },
+
+    "TC02" : {
+        
+    },
+    "product": "Sauce Labs Onesie",
+    "address" : {
+        "firstname" : "hello",
+        "lastname" : "world",
+        "zipcode" : "609 313"
+    }
+}
