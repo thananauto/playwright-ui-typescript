@@ -22,6 +22,7 @@
     "typescript-eslint": "^7.8.0"
   },
   "dependencies": {
+    "@influxdata/influxdb-client": "^1.33.2",
     "dotenv": "^16.4.5"
   }
 }
