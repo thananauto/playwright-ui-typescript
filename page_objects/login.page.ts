@@ -26,7 +26,7 @@ export default class HomePage {
         await this.page.getByTestId('inventory-item-name')
                         .filter({hasText: 'Jacket'})
                         .click();
-        await expect(this.page.getByRole('button', {name: 'Go back Back to products'})).toBeVisible()
+        await expect(this.page.getByRole('button', {name: 'Back to products'})).toBeVisible()
     }
 
 

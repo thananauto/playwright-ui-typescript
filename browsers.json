@@ -1,0 +1,34 @@
+{
+    "chromium" :{
+        "default" : "1.14",
+        "versions" : {
+            "1.14" : {
+                "image" : "playwright/chromium:playwright-1.14.0",
+                "port" : "4444",
+                "path" : "/wd/hub",
+                "tmpfs": {"/tmp":"size=512m"},
+                "additionalNetworks" : ["selenoid-net"]
+            }
+        }
+},
+    "chrome": {
+      "default": "112.0",
+      "versions": {
+        "111.0": {
+          "image": "selenoid/chrome:111.0",
+          "port": "4444",
+          "path" : "/",
+          "tmpfs": {"/tmp":"size=512m"},
+          "additionalNetworks" : ["selenoid-net"]
+        },
+        "112.0": {
+          "image": "selenoid/chrome:112.0",
+          "port": "4444",
+          "path" : "/",
+          "tmpfs": {"/tmp":"size=512m"},
+          "additionalNetworks" : ["selenoid-net"]
+        }
+      }
+}
+}
+    
