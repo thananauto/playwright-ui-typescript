@@ -19,13 +19,23 @@ jobs:
             - name: Set up Docker Buildx
               uses: docker/setup-buildx-action@v3
 
+            - name: Get version and repo name
+              id: version-repo
+              run: |
+                 export name=$(echo ${{ github.repository }}  | cut -d '/' -f 2) 
+                 echo "repo_name=$name" >> "$GITHUB_ENV"
+                 
+                 export version=$(echo ${{ github.ref_name }}  | tr -d v)
+                 echo "version_no=$version" >> "$GITHUB_ENV"
+
+
             - name: Docker meta
               id: meta
               uses: docker/metadata-action@v5
               with:
                 images: |
-                    export name=$(echo ${{ github.repository }}  | cut -d '/' -f 2) 
-                    ${{ vars.DOCKER_USER_NAME }}/$name
+                    
+                    ${{ vars.DOCKER_USER_NAME }}/$repo_name
                 
                 tags: |
                     type=ref,event=branch
@@ -44,9 +54,8 @@ jobs:
             - name: Build a Docker images
               if: ${{ github.ref_type == 'tag' }}
               run: |
-                    export name=$(echo ${{ github.repository }}  | cut -d "/" -f 2) 
-                    export version=$(echo ${{ github.ref_name }}  | tr -d v)
-                    docker build -t ${{ vars.DOCKER_USER_NAME }}/$name:$version .
+                   
+                    docker build -t ${{ vars.DOCKER_USER_NAME }}/$repo_name:$version_no .
                     docker images
                   
        
