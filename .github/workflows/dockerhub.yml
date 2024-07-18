@@ -1,8 +1,6 @@
 name: Upload the test artifacts as Docker image
 on:
     push: 
-        branches: 
-            - 'v*'
         tags: 
             - 'v*'
     workflow_dispatch:
@@ -10,7 +8,7 @@ on:
 
 jobs:
     build-a-image-test:
-        
+        if: ${{ github.ref_type == 'tag' }}
         runs-on: ubuntu-latest
         steps:
             - name: checkout repo
@@ -27,13 +25,12 @@ jobs:
                  
                  export version=$(echo ${{ github.ref_name }}  | tr -d v)
                  echo "version_no=$version" >> "$GITHUB_ENV"
-                 echo $version
+                 
 
 
             - name: Docker meta
               id: meta
               uses: docker/metadata-action@v5
-             
               with:
                 images: |
                     ${{ vars.DOCKER_USER_NAME }}/${{ env.repo_name }}
@@ -52,17 +49,13 @@ jobs:
                     password: ${{ secrets.DOCKER_PASSWORD }}
 
 
-            - name: Build a Docker images
-              if: ${{ github.ref_type == 'tag' }}
+            - name: Check the test image builds
               run: |
-                   
-                    docker build -t ${{ vars.DOCKER_USER_NAME }}/$repo_name:$version_no .
                     docker images
                   
        
       
             - name: push Docker image
-              if: ${{ github.ref_type == 'tag' }}
               uses: docker/build-push-action@v5
               with:
                     context: .
