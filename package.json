@@ -7,7 +7,8 @@
     "test:htmlreport": "npx playwright test & npx playwright show-report",
     "test:full": "npx playwright test",
     "test:debug": "npx playwright test  --ui",
-    "test:e2e": "npx playwright test --grep @e2e"
+    "test:e2e": "npx playwright test --grep @e2e",
+    "prettier:format": "npx prettier 'e2e_tests/*.ts' --write"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,6 @@
     "@playwright/test": "^1.43.1",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.12.7",
-    "eslint": "^8.57.0",
     "globals": "^15.1.0",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.8.0"

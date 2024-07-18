@@ -1,32 +1,34 @@
-import { test, expect } from '@utilities/fixture'
+import { test, expect } from "@utilities/fixture";
 
-test.describe('Application Basic Tests', () => {
+test.describe("Application Basic Tests", () => {
+  let data: any;
+  test.beforeAll(async ({ readData }, testInfo) => {
+    let testName: string = testInfo.title.split("_")[0];
+    data = readData.getFile()["credentials"];
+  });
 
-    let data: any
-    test.beforeAll(async ({ readData }, testInfo) => {
-        let testName: string = testInfo.title.split("_")[0]
-        data = readData.getFile()['credentials']
-    })
-    
-    test.beforeEach(async ({ homePage }) => {
-        await homePage.launchApp( process.env.URL)
-        await homePage.login(data['username'], data['password'])
-    })
-    
-    test('TC01_veirfy Jacket link clicked', {  
-        tag:['@home'] 
-    }, async ({ homePage }) => {
-       await homePage.clickJacket()
-    })
+  test.beforeEach(async ({ homePage }) => {
+    await homePage.launchApp(process.env.URL);
+    await homePage.login(data["username"], data["password"]);
+  });
 
+  test(
+    "TC01_veirfy Jacket link clicked",
+    {
+      tag: ["@home"],
+    },
+    async ({ homePage }) => {
+      await homePage.clickJacket();
+    },
+  );
 
-    test('TC02_Verify all items have cart or remove button', {  
-        tag:['@home'] 
-    }, async ({ prodInfo }) => {
-         
-        await prodInfo.validateRemoveOrAddToCart()
-    })
-    
-    
-    
-})
+  test(
+    "TC02_Verify all items have cart or remove button",
+    {
+      tag: ["@home"],
+    },
+    async ({ prodInfo }) => {
+      await prodInfo.validateRemoveOrAddToCart();
+    },
+  );
+});

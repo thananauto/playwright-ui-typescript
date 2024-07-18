@@ -1,5 +1,5 @@
-import { defineConfig, devices } from '@playwright/test';
-import dotenv from 'dotenv'
+import { defineConfig, devices } from "@playwright/test";
+import dotenv from "dotenv";
 
 /**
  * Read environment variables from file.
@@ -7,13 +7,13 @@ import dotenv from 'dotenv'
  */
 // require('dotenv').config();
 
-dotenv.config()
+dotenv.config();
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './e2e_tests',
+  testDir: "./e2e_tests",
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -23,43 +23,41 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */ //['./custom_report/customreporter.ts']
-  reporter: [['html'], ['./custom_report/customreporter.ts']],
+  reporter: [["html"], ["./custom_report/customreporter.ts"]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-     baseURL: 'https://www.saucedemo.com',
+    baseURL: "https://www.saucedemo.com",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
-    screenshot: 'only-on-failure',
-    
+    trace: "on",
+    screenshot: "only-on-failure",
   },
 
   /* Configure projects for major browsers */
   projects: [
-   // {
-     //   name: 'Sauce Demo - Chrome',
-       //  use: { 
-         // ...devices['Desktop Chrome'],
-          // channel: 'chrome',
-          //testIdAttribute: 'data-test',
-          //launchOptions:{
-          //  args: ['--start-maximized']
-         // }
-        // },
-         
-   // },
+    // {
+    //   name: 'Sauce Demo - Chrome',
+    //  use: {
+    // ...devices['Desktop Chrome'],
+    // channel: 'chrome',
+    //testIdAttribute: 'data-test',
+    //launchOptions:{
+    //  args: ['--start-maximized']
+    // }
+    // },
+
+    // },
     {
-      name: 'chromium',
-      use: { 
-        ...devices['Desktop Chrome'],
-        testIdAttribute: 'data-test',
+      name: "chromium",
+      use: {
+        ...devices["Desktop Chrome"],
+        testIdAttribute: "data-test",
         launchOptions: {
-          args : ['--start-maximized']
-        }
+          args: ["--start-maximized"],
+        },
       },
-    }    
-   
+    },
 
     /* Test against mobile viewports. */
     // {
