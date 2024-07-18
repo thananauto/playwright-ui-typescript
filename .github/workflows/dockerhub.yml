@@ -33,11 +33,10 @@ jobs:
             - name: Docker meta
               id: meta
               uses: docker/metadata-action@v5
-              env:
-                REPO_NAME: ${{ steps.version-repo.outputs.repo_name }}
+             
               with:
                 images: |
-                    ${{ vars.DOCKER_USER_NAME }}/$REPO_NAME
+                    ${{ vars.DOCKER_USER_NAME }}/${{ env.repo_name }}
                 
                 tags: |
                     type=ref,event=branch
