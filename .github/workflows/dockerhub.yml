@@ -47,14 +47,7 @@ jobs:
               with:
                     username: ${{ vars.DOCKER_USER_NAME }}
                     password: ${{ secrets.DOCKER_PASSWORD }}
-
-
-            - name: Check the test image builds
-              run: |
-                    docker images
-                  
        
-      
             - name: push Docker image
               uses: docker/build-push-action@v5
               with:
@@ -63,3 +56,8 @@ jobs:
                     tags: |
                         ${{ steps.meta.outputs.tags }}
                     labels: ${{ steps.meta.outputs.labels }}
+                    
+             - name: Check the test image builds
+               run: |
+                    docker images
+                  

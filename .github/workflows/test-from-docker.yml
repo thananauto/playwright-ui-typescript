@@ -1,0 +1,66 @@
+name: Playwright Tests executing in docker container
+on:
+  push:
+    branches: [ testrun/** ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+    container-test-job:
+        permissions:
+            contents: write
+            pull-requests: write
+        runs-on: ubuntu-latest
+
+        container: 
+            image: thanandock/playwright-ui-typescript:latest
+            volumes:
+              - ./playwright-report:/app/playwright-report
+            credentials:
+              username: ${{ vars.DOCKER_USER_NAME }}
+              password: ${{ secrets.DOCKER_PASSWORD }}
+        steps:            
+            - name: Run Playwright tests
+              id: tests
+              run: npx playwright test
+
+            - uses: mshick/add-pr-comment@v2
+              if: (contains(fromJSON('["pull_request", "push"]'), github.event_name))
+              env:
+                content: $(cat  playwright-report/result.txt)
+              with:
+                message: |
+                        **Howdie!** Summary status ${{ env.content }}
+                message-failure: |
+                        Workflow failed
+    
+    publish-reports:
+        if: ${{ contains(github.ref,'main')}}
+        needs: [ container-test-job ]
+        runs-on: ubuntu-latest
+        permissions: 
+            pages: write
+            id-token: write
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+
+        steps:
+        - name: Setup Pages
+          uses: actions/configure-pages@v3
+
+        - name: Upload Artifact for pages
+          uses: actions/upload-pages-artifact@v1
+          with:
+        # location of the coverage artifacts
+                path: "./playwright-report"
+
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v2
+            
+       
+        
+
