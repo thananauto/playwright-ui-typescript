@@ -24,9 +24,10 @@ jobs:
               run: |
                  export name=$(echo ${{ github.repository }}  | cut -d '/' -f 2) 
                  echo "repo_name=$name" >> "$GITHUB_ENV"
-                 
+                 echo $name
                  export version=$(echo ${{ github.ref_name }}  | tr -d v)
                  echo "version_no=$version" >> "$GITHUB_ENV"
+                 echo $version
 
 
             - name: Docker meta
