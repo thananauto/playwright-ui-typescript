@@ -75,6 +75,7 @@ jobs:
       with:
         # location of the coverage artifacts
         path: "./playwright-report"
+        
       
     - uses: mshick/add-pr-comment@v2
       if: always()
