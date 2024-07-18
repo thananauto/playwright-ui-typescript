@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN sudo apt-get update && sudo apt-get install
+RUN apt-get update && sudo apt-get install
 RUN npm cache clean --force
 RUN npm install -g playwright
 RUN npm install

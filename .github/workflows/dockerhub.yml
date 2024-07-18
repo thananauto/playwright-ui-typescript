@@ -5,6 +5,7 @@ on:
             - 'v*'
         tags: 
             - 'v*'
+    workflow_dispatch:
 
 
 jobs:
