@@ -24,7 +24,7 @@ jobs:
               uses: docker/metadata-action@v5
               with:
                 images: |
-                    export name=$(echo ${{ github.repository }}  | cut -d "/" -f 2) 
+                    export name=$(echo ${{ github.repository }}  | cut -d '/' -f 2) 
                     ${{ vars.DOCKER_USER_NAME }}/$name
                 
                 tags: |
