@@ -2,7 +2,7 @@ name: Upload the test artifacts as Docker image
 on:
     push: 
         branches: 
-            - main
+            - 'v*'
         tags: 
             - 'v*'
 
