@@ -33,6 +33,7 @@ jobs:
 
             - name: check summary number
               run: |
+                ls
                 ls ./playwright-report/
                 cat ./playwright-report/result.txt
 
