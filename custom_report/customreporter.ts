@@ -44,7 +44,7 @@ class MyReporter implements Reporter {
         To see the full report, please visit our CI/CD piplene with reporter.`;
 
     console.log(resultMarkdownMessage);
-    writeFileSync("result.txt", resultMarkdownMessage, {
+    writeFileSync("./playwright-report/result.txt", resultMarkdownMessage, {
       flag: "w"
      })
     //time duration to execute
