@@ -24,12 +24,12 @@ jobs:
         steps:            
             - name: Run Playwright tests
               id: tests
-              run: npx playwright test
+              run: -c "npx playwright test"
 
             - uses: mshick/add-pr-comment@v2
               if: (contains(fromJSON('["pull_request", "push"]'), github.event_name))
               env:
-                content: $(cat  playwright-report/result.txt)
+                content: $(cat  ./playwright-report/result.txt)
               with:
                 message: |
                         **Howdie!** Summary status ${{ env.content }}
