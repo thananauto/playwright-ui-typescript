@@ -41,10 +41,10 @@ jobs:
               uses: mshick/add-pr-comment@v2
               if: (contains(fromJSON('["pull_request", "push"]'), github.event_name))
               env:
-                content: ${{ cat ./playwright-report/result.txt }}
+                content:  $(cat ./playwright-report/result.txt) 
               with:
-                message: |
-                        **Howdie!** Summary status ${{ env.content }}
+                message-path: |
+                        ./playwright-report/result.txt
                 message-failure: |
                         Workflow failed
     
