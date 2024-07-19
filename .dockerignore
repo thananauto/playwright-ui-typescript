@@ -1,7 +1,6 @@
 ReadMe.md
 .github/
 .vscode/
-custom_report/
 node_modules/
 playwright-report/
 test-results/

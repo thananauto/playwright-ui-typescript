@@ -1,10 +1,12 @@
-FROM mcr.microsoft.com/playwright:v1.45.2-jammy
+# use any base node image
+FROM node:20-bookworm
 
-#set the working directory
+# copy the current working directories, please add .dockerignore to ommit unnecessay files
 WORKDIR /app
-# copy the whole directory makesure add .dockerignore in root to exclude build output folders
 COPY . /app
 
-# Install dependencies
 RUN npm cache clean --force
+# install only the chromium based browser and dependencies
+RUN npx -y playwright install --with-deps chromium
 RUN npm install
+ENTRYPOINT ["/bin/sh"]
