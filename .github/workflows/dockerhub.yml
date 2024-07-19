@@ -4,6 +4,12 @@ on:
         tags: 
             - 'v*'
     workflow_dispatch:
+      inputs:
+            name:
+                type: string
+                description: Enter the tag name
+                required: true
+                default: Enter value in format vx.x.x
 
 
 jobs:

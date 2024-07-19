@@ -7,6 +7,6 @@ COPY . /app
 
 RUN npm cache clean --force
 # install only the chromium based browser and dependencies
-RUN npx -y playwright install --with-deps chromium
 RUN npm install
+RUN npx -y playwright install --with-deps chromium
 ENTRYPOINT ["/bin/sh"]
