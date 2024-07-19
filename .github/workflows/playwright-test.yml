@@ -67,7 +67,7 @@ jobs:
       if: always()
       with:
           message-path: |
-            result.txt
+            ./playwright-report/result.txt
           message-failure: |
             Workflow failed
 
