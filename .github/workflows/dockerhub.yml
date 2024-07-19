@@ -57,7 +57,7 @@ jobs:
                         ${{ steps.meta.outputs.tags }}
                     labels: ${{ steps.meta.outputs.labels }}
                     
-             - name: Check the test image builds
-               run: |
+            - name: Check the test image builds
+              run: |
                     docker images
                   
