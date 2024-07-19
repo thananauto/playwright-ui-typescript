@@ -37,7 +37,6 @@ jobs:
                 ls ./playwright-report/
                 cat ./playwright-report/result.txt
 
-
             - name: Add the test summary status back to PR comment
               uses: mshick/add-pr-comment@v2
               if: (contains(fromJSON('["pull_request", "push"]'), github.event_name))
