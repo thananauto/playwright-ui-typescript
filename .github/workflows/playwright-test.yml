@@ -1,9 +1,7 @@
-name: Playwright Tests
+name: Test execution on Github server
 on:
   push:
-    branches: [ test-run**, main ]
-  pull_request:
-    branches: [ main, master ]
+    branches: [ test-run/**, main ]
 
   workflow_dispatch:
 
@@ -13,7 +11,6 @@ jobs:
       contents: write
       pull-requests: write
      
-
     timeout-minutes: 60
 
     runs-on: ubuntu-latest
@@ -58,25 +55,14 @@ jobs:
 
     - name: Setup Pages
       if: ${{ contains(github.ref,'main')}}
-      uses: actions/configure-pages@v3
-
-   # - uses: actions/upload-artifact@v4
-    #  if: always()
-     # with:
-      #  name: github-pages
-       # path: playwright-report/
-        #retention-days: 5
-
-   
+      uses: actions/configure-pages@v3  
 
     - name: Upload Artifact
       if: ${{ contains(github.ref,'main')}}
       uses: actions/upload-pages-artifact@v1
       with:
-        # location of the coverage artifacts
         path: "./playwright-report"
 
-      
     - uses: mshick/add-pr-comment@v2
       if: always()
       with:
@@ -84,7 +70,6 @@ jobs:
             result.txt
           message-failure: |
             Workflow failed
-
 
   deploy:
     if:  ${{ contains(github.ref,'main')}}
@@ -96,7 +81,6 @@ jobs:
       id-token: write
 
     environment:
-        # environment created automatically by GitHub
         name: github-pages
         url: ${{ steps.deployment.outputs.page_url }}
 

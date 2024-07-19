@@ -1,7 +1,7 @@
-name: Playwright Tests executing in docker container
+name: Execute tests inside Docker container
 on:
   push:
-    branches: [ testrun/** ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -26,20 +26,15 @@ jobs:
 
             - name: pull and run the test from image
               run: |
-                docker pull thanandock/playwright-ui-typescript:latest
+                docker pull ${{ vars.DOCKER_USER_NAME }}/playwright-ui-typescript:latest
                 docker run  -v ./playwright-report:/app/playwright-report \
                       thanandock/playwright-ui-typescript:latest \
                       -c "npx playwright test"
 
-            - name: check summary number
-              run: |
-                ls
-                ls ./playwright-report/
-                cat ./playwright-report/result.txt
 
             - name: Add the test summary status back to PR comment
               uses: mshick/add-pr-comment@v2
-              if: (contains(fromJSON('["pull_request", "push"]'), github.event_name))
+              if: (contains(fromJSON('["pull_request"]'), github.event_name))
               env:
                 content:  $(cat ./playwright-report/result.txt) 
               with:
@@ -49,7 +44,7 @@ jobs:
                         Workflow failed
     
     publish-reports:
-        if: ${{ contains(github.ref,'main')}}
+        if: ${{ contains(github.ref,'main') &&  (contains(fromJSON('[ "push"]'), github.event_name)) }}
         needs: [ container-test-job ]
         runs-on: ubuntu-latest
         permissions: 
@@ -66,7 +61,6 @@ jobs:
         - name: Upload Artifact for pages
           uses: actions/upload-pages-artifact@v1
           with:
-        # location of the coverage artifacts
                 path: "./playwright-report"
 
         - name: Deploy to GitHub Pages
