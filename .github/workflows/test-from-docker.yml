@@ -13,26 +13,38 @@ jobs:
             contents: write
             pull-requests: write
         runs-on: ubuntu-latest
+        name: execute a test from a image
+        steps:        
+            - name: set up a docker environement
+              uses: docker/setup-buildx-action@v3   
 
-        container: 
-            image: thanandock/playwright-ui-typescript:latest
-            volumes:
-              - ./playwright-report:/app/playwright-report
-            credentials:
-              username: ${{ vars.DOCKER_USER_NAME }}
-              password: ${{ secrets.DOCKER_PASSWORD }}
-        steps:            
-            - name: Run Playwright tests
-              id: tests
-              run: npx playwright test
+            - name: Login to Docker hub
+              uses: docker/login-action@v3
+              with:
+                username: ${{ vars.DOCKER_USER_NAME }}
+                password: ${{ secrets.DOCKER_PASSWORD }}
 
-            - uses: mshick/add-pr-comment@v2
+            - name: pull and run the test from image
+              run: |
+                docker pull thanandock/playwright-ui-typescript:latest
+                docker run  -v ./playwright-report:/app/playwright-report \
+                      thanandock/playwright-ui-typescript:latest \
+                      -c "npx playwright test"
+
+            - name: check summary number
+              run: |
+                ls
+                ls ./playwright-report/
+                cat ./playwright-report/result.txt
+
+            - name: Add the test summary status back to PR comment
+              uses: mshick/add-pr-comment@v2
               if: (contains(fromJSON('["pull_request", "push"]'), github.event_name))
               env:
-                content: $(cat  playwright-report/result.txt)
+                content:  $(cat ./playwright-report/result.txt) 
               with:
-                message: |
-                        **Howdie!** Summary status ${{ env.content }}
+                message-path: |
+                        ./playwright-report/result.txt
                 message-failure: |
                         Workflow failed
     
