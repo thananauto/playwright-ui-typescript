@@ -27,7 +27,7 @@ jobs:
             - name: pull and run the test from image
               run: |
                 docker pull thanandock/playwright-ui-typescript:latest
-                docker run -it -v ./playwright-report:/app/playwright-report \
+                docker run  -v ./playwright-report:/app/playwright-report \
                       thanandock/playwright-ui-typescript:latest \
                       -c "npx playwright test"
 
