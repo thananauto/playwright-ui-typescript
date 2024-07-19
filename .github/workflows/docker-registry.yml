@@ -1,4 +1,4 @@
-name: Upload the test artifacts as Docker image
+name: Upload the image to docker hub
 on:
     push: 
         tags: 
@@ -13,7 +13,7 @@ on:
 
 
 jobs:
-    build-a-image-test:
+    build-and-push-image:
         if: ${{ github.ref_type == 'tag' }}
         runs-on: ubuntu-latest
         steps:
