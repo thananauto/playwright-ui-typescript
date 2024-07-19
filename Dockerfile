@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.43.1-jammy
+FROM mcr.microsoft.com/playwright:v1.45.2-jammy
 
 #set the working directory
 WORKDIR /app
@@ -6,7 +6,5 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN apt-get update && apt-get install
 RUN npm cache clean --force
-RUN npm install -g playwright
 RUN npm install
