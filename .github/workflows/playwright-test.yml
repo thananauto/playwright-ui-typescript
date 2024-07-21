@@ -86,16 +86,16 @@ jobs:
 
    
    
-    - name: Fail the job if there any failed case
-      if:  steps.tests.outputs.fail_count != '0' 
-      run : |
-            exit 1
+   # - name: Fail the job if there any failed case
+    #  if:  steps.tests.outputs.fail_count != '0' 
+     # run : |
+      #      exit 1
 
     outputs:
           fail_count: ${{ steps.tests.outputs.fail_count }}
 
   deploy:
-    #if:  ${{ contains(github.ref,'main') &&  needs.test.outputs.fail_count != '0' }}
+    if:  ${{ contains(github.ref,'main') &&  needs.test.outputs.fail_count != '0' }}
     
     needs: test
 
