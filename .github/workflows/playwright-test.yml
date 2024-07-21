@@ -16,9 +16,7 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     continue-on-error: true
-    environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
+   
 
     steps:
     - name: checkout repo
@@ -86,10 +84,7 @@ jobs:
       with:
         path: "./playwright-report"
 
-    - name: Deploy to GitHub Pages
-      if: steps.tests.outputs.fail_count != '0'
-      id: deployment
-      uses: actions/deploy-pages@v2
+   
    
     - name: Fail the job if there any failed case
       if:  steps.tests.outputs.fail_count != '0' 
