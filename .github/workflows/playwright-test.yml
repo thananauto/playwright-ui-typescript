@@ -86,9 +86,10 @@ jobs:
       fail-count: ${{ steps.tests.outputs.fail_count }}
 
   deploy:
-    if:  ${{ needs.test.outputs.fail_count != 0 }}
     runs-on: ubuntu-latest
     needs: test
+    env:
+      failure_count : ${{ needs.test.outputs.fail_count }}
 
     permissions: 
       pages: write
@@ -100,6 +101,7 @@ jobs:
 
     steps:
           - name: Deploy to GitHub Pages
+            if: $failure_count != '0'
             id: deployment
             uses: actions/deploy-pages@v2
 
