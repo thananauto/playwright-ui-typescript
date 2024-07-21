@@ -57,8 +57,9 @@ jobs:
     - name: Get the failure count
       id: tests
       run: |
-        export count=$(cat ./playwright-report/result.txt | grep Failed | cut -d ':' -f 2 | td -d ' ') 
+        export count=$(cat ./playwright-report/result.txt | grep Failed | cut -d ':' -f 2 | tr -d ' ') 
         echo "fail_count=$count" >> "$GITHUB_OUTPUT"
+        echo $count
   
     - uses: mshick/add-pr-comment@v2
       if: always()
