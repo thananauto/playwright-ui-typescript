@@ -99,7 +99,7 @@ jobs:
 
     steps:
           - name: Deploy to GitHub Pages
-            if: needs.test.outputs.fail_count != '0'
+            if: ${{ needs.test.outputs.fail_count != '0' }
             id: deployment
             uses: actions/deploy-pages@v2
 
