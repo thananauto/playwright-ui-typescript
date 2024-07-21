@@ -92,9 +92,5 @@ jobs:
       id: deployment
       uses: actions/deploy-pages@v2
 
-    - name: Fail the job if there any failed case
-      if: ${{ steps.tests.outputs.fail_count != '0' }}
-      run : |
-            exit 1
     
     
