@@ -30,18 +30,16 @@ class MyReporter implements Reporter {
     console.log(`Finished the run: ${result.status}`);
     //overall summary status
     const resultMarkdownMessage = `
-        Test run results
+       Test run results
         
         Summary:
           - ⌛ Total test cases ${this.count["total"]}
           - 📦 Tests results: 
-            - ✅ ${this.count["passed"]}
-            - ❌ ${this.count["failed"]}
-            - ⏩ ${this.count["skipped"]}
-        
-        "👍 All tests passed successfully!"}
+            - Passed ✅: ${this.count["passed"]}
+            - Failed ❌: ${this.count["failed"]}
+            - Skipped ⏩: ${this.count["skipped"]}
             
-        To see the full report, please visit our CI/CD piplene with reporter.`;
+        To see the full report, please visit our github page for more details`;
 
     console.log(resultMarkdownMessage);
     writeFileSync("./playwright-report/result.txt", resultMarkdownMessage, {

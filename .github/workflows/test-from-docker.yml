@@ -28,20 +28,19 @@ jobs:
               run: |
                 docker pull ${{ vars.DOCKER_USER_NAME }}/playwright-ui-typescript:latest
                 docker run  -v ./playwright-report:/app/playwright-report \
-                      thanandock/playwright-ui-typescript:latest \
+                      ${{ vars.DOCKER_USER_NAME }}/playwright-ui-typescript:latest \
                       -c "npx playwright test"
 
 
             - name: Add the test summary status back to PR comment
               uses: mshick/add-pr-comment@v2
               if: (contains(fromJSON('["pull_request"]'), github.event_name))
-              env:
-                content:  $(cat ./playwright-report/result.txt) 
               with:
                 message-path: |
                         ./playwright-report/result.txt
                 message-failure: |
                         Workflow failed
+                        
             - name: Setup Pages
               uses: actions/configure-pages@v3
 
