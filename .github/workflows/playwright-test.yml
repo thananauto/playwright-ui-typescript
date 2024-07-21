@@ -84,9 +84,7 @@ jobs:
       with:
         path: "./playwright-report"
 
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v2
+   
    
     - name: Fail the job if there any failed case
       if:  steps.tests.outputs.fail_count != '0' 
@@ -98,7 +96,7 @@ jobs:
 
   deploy:
     #if:  ${{ contains(github.ref,'main') &&  needs.test.outputs.fail_count != '0' }}
-    runs-on: ubuntu-latest
+    
     needs: test
 
     permissions: 
@@ -106,13 +104,14 @@ jobs:
       id-token: write
 
     environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
+    runs-on: ubuntu-latest
     steps:
           - name: Deploy to GitHub Pages
             id: deployment
-            uses: actions/deploy-pages@v2
+            uses: actions/deploy-pages@v4
     
   
 
