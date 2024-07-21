@@ -19,7 +19,7 @@ export default class Checkout {
   }
 
   async checkoutOverview() {
-    await expect(this.page.getByTestId("payment-info-label")).not.toBeVisible();
+    await expect(this.page.getByTestId("payment-info-label")).toBeVisible();
     await expect(this.page.getByTestId("shipping-info-label")).toBeVisible();
     await expect(this.page.getByTestId("total-info-label")).toBeVisible();
   }
