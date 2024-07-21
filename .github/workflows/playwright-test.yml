@@ -17,9 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
    
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
     - name: checkout repo
@@ -95,6 +92,27 @@ jobs:
       if:  steps.tests.outputs.fail_count != '0' 
       run : |
             exit 1
+
+    outputs:
+          fail_count: ${{ steps.tests.outputs.fail_count }}
+
+  deploy:
+    #if:  ${{ contains(github.ref,'main') &&  needs.test.outputs.fail_count != '0' }}
+    runs-on: ubuntu-latest
+    needs: test
+
+    permissions: 
+      pages: write
+      id-token: write
+
+    environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+          - name: Deploy to GitHub Pages
+            id: deployment
+            uses: actions/deploy-pages@v2
     
   
 
