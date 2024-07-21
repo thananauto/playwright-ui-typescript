@@ -95,7 +95,7 @@ jobs:
           fail_count: ${{ steps.tests.outputs.fail_count }}
 
   deploy:
-    if:  ${{ contains(github.ref,'main') &&  needs.test.outputs.fail_count != '0' }}
+    if:  ${{ needs.test.outputs.fail_count != '0' }}
     
     needs: test
 
