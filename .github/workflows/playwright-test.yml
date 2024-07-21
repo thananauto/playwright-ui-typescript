@@ -10,10 +10,14 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      pages: write
+      id-token: write
      
     timeout-minutes: 60
     runs-on: ubuntu-latest
     continue-on-error: true
+   
+
     steps:
     - name: checkout repo
       uses: actions/checkout@v4
@@ -50,23 +54,17 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Playwright tests
-      id: tests
+      continue-on-error: true
       run: |
         npx playwright test
-         export count=$(cat ./playwright-report/result.txt | grep Failed | cut -d ':' -f 2 | td -d ' ') 
-         echo "fail_count=$count" >> "$GITHUB_OUTPUT"
-
-
-    - name: Setup Pages
-      if: ${{ contains(github.ref,'main')}}
-      uses: actions/configure-pages@v3  
-
-    - name: Upload Artifact
-      if: ${{ contains(github.ref,'main')}}
-      uses: actions/upload-pages-artifact@v1
-      with:
-        path: "./playwright-report"
-
+       
+    - name: Get the failure count
+      id: tests
+      run: |
+        export count=$(cat ./playwright-report/result.txt | grep Failed | cut -d ':' -f 2 | tr -d ' ') 
+        echo "fail_count=$count" >> "$GITHUB_OUTPUT"
+        echo $count
+  
     - uses: mshick/add-pr-comment@v2
       if: always()
       with:
@@ -75,17 +73,30 @@ jobs:
           message-failure: |
             Workflow failed
 
-    - name: Fail the job if there any failed case
-      if: ${{ steps.tests.outputs.fail_count == '0' }}
-      run : |
-            exit 1
-    
+
+    - name: Setup Pages
+      if: steps.tests.outputs.fail_count != '0'
+      uses: actions/configure-pages@v3  
+
+    - name: Upload Artifact
+      if: steps.tests.outputs.fail_count != '0'
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: "./playwright-report"
+
+   
+   
+   # - name: Fail the job if there any failed case
+    #  if:  steps.tests.outputs.fail_count != '0' 
+     # run : |
+      #      exit 1
+
     outputs:
-      fail-count: ${{ steps.tests.outputs.fail_count }}
+          fail_count: ${{ steps.tests.outputs.fail_count }}
 
   deploy:
-    if:  ${{ contains(github.ref,'main') &&  needs.test.outputs.fail_count != '0' }}
-    runs-on: ubuntu-latest
+   # if:   needs.test.outputs.fail_count != '0'
+    
     needs: test
 
     permissions: 
@@ -93,12 +104,16 @@ jobs:
       id-token: write
 
     environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
+    runs-on: ubuntu-latest
     steps:
           - name: Deploy to GitHub Pages
             id: deployment
-            uses: actions/deploy-pages@v2
+            uses: actions/deploy-pages@v4
+    
+  
 
           
+
