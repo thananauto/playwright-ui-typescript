@@ -80,7 +80,7 @@ jobs:
       run : |
             exit 1
     
-    output:
+    outputs:
       fail-count: ${{ steps.tests.outputs.fail_count }}
 
   deploy:
