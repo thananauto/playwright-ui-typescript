@@ -83,7 +83,7 @@ jobs:
             exit 1
     
     outputs:
-      fail-count: ${{ steps.tests.outputs.fail_count }}
+      fail_count: ${{ steps.tests.outputs.fail_count }}
 
   deploy:
     runs-on: ubuntu-latest
