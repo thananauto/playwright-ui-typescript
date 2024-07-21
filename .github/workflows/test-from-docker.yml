@@ -55,9 +55,9 @@ jobs:
               run : |
                   exit 1
     
-    outputs:
-      fail-count: ${{ steps.tests.outputs.fail_count }}
-    
+        outputs:
+          fail-count: ${{ steps.tests.outputs.fail_count }}
+        
     publish-reports:
         if: ${{ contains(github.ref,'main') &&  (contains(fromJSON('[ "push"]'), github.event_name)) && needs.test.outputs.fail_count != '0' }}
         needs: [ container-test-job ]
