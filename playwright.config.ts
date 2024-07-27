@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 // require('dotenv').config();
 
 dotenv.config();
-const timestamp = (new Date(Date.now()).toUTCString()).replace(/ /gi,'_').replace(/:/gi,'').replace(/,/gi,'')
+const timestamp = (new Date(Date.now()).toUTCString()).replace(/ /gi,'_').replace(/:/gi,'_').replace(/,/gi,'')
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
