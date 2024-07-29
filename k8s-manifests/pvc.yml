@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: ui-test-job
+  name: logs-persistent-vol-claim
+spec:
+  storageClassName: manual
+  resources:
+    requests:
+      storage: 256Mi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany

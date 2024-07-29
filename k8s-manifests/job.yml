@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  namespace: ui-test-job
+  name: ui-test
+  labels:
+    app: playwright
+    name: ui-jobs
+spec:
+  ttlSecondsAfterFinished: 100
+  # set backofflimit as 0, otherwise this job will keep on execute till the status as completed
+  backoffLimit: 0
+  template:
+    metadata:
+      name: ui-test-job
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: sample-ui-test
+          image: thanandock/playwright-ui-typescript:latest
+          args: ["-c", "npx playwright test"]
+          volumeMounts:
+            - name: storage
+              mountPath: /app/playwright-report
+
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: logs-persistent-vol-claim
