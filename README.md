@@ -3,10 +3,12 @@ Sample set of UI test cases build for the website [saucedemo](https://saucedemo.
 
 ## Table of contents
 * Local copy
+* Mongo DB database integration
 * Test Trend by Influx DB 2.0
 * Dockerfile
 * Github Actions Workflow
 * Kubernetes
+
 
 ### Local copy
 Just clone this repo and run these commands `npm install` for dowload all dependencies and run `npx playwright test`.
