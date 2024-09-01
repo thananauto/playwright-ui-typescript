@@ -39,4 +39,29 @@ test.describe("Cart item page validation", () => {
       await checkoutPage.orderCompletion();
     },
   );
+  
+  test("Check github hover link", { tag: "@git" }, async ({ page }) => {
+    await page.goto("https://mrjohn5on.github.io/");
+    const home = page
+      .locator(".nav_menu_list")
+      .getByRole("link", { name: "Home", exact: true });
+    await expect(home).toHaveCSS("color", "rgb(255, 4, 4)");
+    await home.hover({ force: true });
+    await expect(home).toHaveCSS("color", "rgb(0, 0, 0)");
+  });
+
+  const students: string[] = ["Vijay", "Noel", "Prakash"];
+  students.forEach((stu) => {
+    test(
+      `DB validation for ${stu}`,
+      { tag: "@db" },
+      async ({ mongoclient }) => {
+        //rest of your tests
+        const json = await mongoclient.readStudent(stu);
+        expect(json.first_name).toEqual(stu);
+        expect(json.age).toBeGreaterThan(18);
+        expect(json.last_name).not.toBeNull();
+      },
+    );
+  });
 });

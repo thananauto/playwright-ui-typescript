@@ -9,15 +9,20 @@ import {
 import { influx, Point } from "./influxdb";
 import { writeFileSync } from "fs";
 
+import setup from "@/e2e/init/global-setup";
+import teardown from "@/e2e/init/global-teardown";
+
 class MyReporter implements Reporter {
   count = { total: 0, passed: 0, failed: 0, skipped: 0 };
   arr_err: any = [];
-  onBegin(config: FullConfig, suite: Suite) {
+  async onBegin(config: FullConfig, suite: Suite) {
+    console.log("My Reporter ------ set up DB client instance ......");
+    //await setup();
     console.log(`Starting the run with ${suite.allTests().length} tests`);
     this.count["total"] = suite.allTests().length;
   }
 
-  onTestBegin(test: TestCase, result: TestResult) {
+ async onTestBegin(test: TestCase, result: TestResult) {
     console.log(`Starting test ${test.title}`);
   }
 
@@ -27,10 +32,12 @@ class MyReporter implements Reporter {
   }
 
   async onEnd(result: FullResult) {
+    //await teardown();
+    console.log("My Reporter ------ client instance done ......");
     console.log(`Finished the run: ${result.status}`);
     //overall summary status
     const resultMarkdownMessage = `
-       Test run results
+        Test run results
         
         Summary:
           - ⌛ Total test cases ${this.count["total"]}
@@ -43,8 +50,8 @@ class MyReporter implements Reporter {
 
     console.log(resultMarkdownMessage);
     writeFileSync("./playwright-report/result.txt", resultMarkdownMessage, {
-      flag: "w"
-     })
+      flag: "w",
+    });
     //time duration to execute
     console.log(`Total duration: ${result.duration}`);
     if (this.count["failed"] > 0) {

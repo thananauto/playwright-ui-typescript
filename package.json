@@ -8,7 +8,7 @@
     "test:full": "npx playwright test",
     "test:debug": "npx playwright test  --ui",
     "test:e2e": "npx playwright test --grep @e2e",
-    "prettier:format": "npx prettier 'e2e_tests/*.ts' --write"
+    "prettier:format": "npx prettier . --write"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +24,10 @@
   },
   "dependencies": {
     "@influxdata/influxdb-client": "^1.33.2",
+    "bson": "^6.8.0",
     "dotenv": "^16.4.5",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "mongodb": "^6.8.0",
+    "tsx": "^4.19.0"
   }
 }

@@ -1,4 +1,5 @@
 import { test as base, expect } from "@playwright/test";
+import { dbSingleton, type MongoClientSingelton } from "@utilities/mongoclient";
 import {
   HomePage,
   Checkout,
@@ -13,11 +14,13 @@ type pageObject = {
   prodInfo: ProductInfo;
   prodCart: ProductCartPage;
   readData: ReadData;
+  mongoclient: Readonly<MongoClientSingelton>;
 };
 type pageObject1 = {
   homePage: HomePage;
 };
 
+const db = base.extend<{}>({});
 const test2 = base.extend<pageObject1>({
   homePage: async ({ baseURL, page, context }, use) => {
     await context.newPage();
@@ -46,6 +49,12 @@ const test = base.extend<pageObject>({
     const prodCart = new ProductCartPage(page);
     await use(prodCart);
   },
+
+  mongoclient: async ({}, use) => {
+    const client = await dbSingleton.getClient()
+    if(!client) throw Error('DB Client Instance is not initiated')
+    await use(dbSingleton);
+  },
 });
 
-export { test, test2, expect };
+export { test, test2, expect, db };
