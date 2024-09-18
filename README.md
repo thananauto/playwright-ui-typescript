@@ -19,7 +19,7 @@ By using  the custom reporter of playwright, we can easily feed  the summary res
 
 ### Dockerfile
 If you want to build and run the test case in `Docker` environment. Clone this repo and to build the image
-`docker build -t <name>:<tag> .` and run these command for test execution `docker run -it -v $pwd/report:/app/playwright-report <name>:<tag> -c "npx playwright test"`
+`docker build -t <name>:<tag> .` and run these command for test execution `docker run -it -v $(pwd)/report:/app/playwright-report <name>:<tag> -c "npx playwright test"`
 
 ### Github Actions Workflow
 For continious integration we can easily accomodate the playwright test execution in github action workflow
