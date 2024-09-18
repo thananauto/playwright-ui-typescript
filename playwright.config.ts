@@ -8,22 +8,29 @@ import dotenv from "dotenv";
 // require('dotenv').config();
 
 dotenv.config();
-const timestamp = (new Date(Date.now()).toUTCString()).replace(/ /gi,'_').replace(/:/gi,'_').replace(/,/gi,'')
+const timestamp = new Date(Date.now())
+  .toUTCString()
+  .replace(/ /gi, "_")
+  .replace(/:/gi, "")
+  .replace(/,/gi, "");
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: "./e2e_tests",
-  /* Run tests in files in parallel */
+  testDir: "./e2e" /* Run tests in files in parallel */,
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */ 
-  reporter: [["html",{outputFolder: `./playwright-report/${timestamp}`}], ['list'], ["./custom_report/customreporter.ts"]],
+  workers: process.env.CI ? 1 : undefined, //,['.\\custom_report\\customreporter.ts']
+  /* Reporter to use. See https://playwright.dev/docs/test-reporters */ //['./custom_report/customreporter.ts']
+  reporter: [
+    ["html", { outputFolder: `./playwright-report/${timestamp}` }],
+    ["list"],
+    ["./custom_report/customreporter.ts"],
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -33,6 +40,8 @@ export default defineConfig({
     trace: "on",
     screenshot: "only-on-failure",
   },
+  //globalSetup: require.resolve('./e2e/init/global-setup'),
+  //globalTeardown: require.resolve('./e2e/init/global-teardown'),
 
   /* Configure projects for major browsers */
   projects: [
@@ -50,14 +59,28 @@ export default defineConfig({
     // },
     {
       name: "chromium",
+       dependencies: ["init DB Connection"],
       use: {
         ...devices["Desktop Chrome"],
         testIdAttribute: "data-test",
         launchOptions: {
           args: ["--start-maximized"],
         },
+
+        //connectOptions: {
+        // wsEndpoint: "ws://playwright-ui-typescript-pw-server-1:3000/"
+        //}
       },
     },
+     {
+       name: "init DB Connection",
+       testMatch: '**/setup.ts',
+        teardown: 'close DB'
+     },
+     {
+        name: 'close DB',
+       testMatch: '**/teardown.ts'
+       }
 
     /* Test against mobile viewports. */
     // {
