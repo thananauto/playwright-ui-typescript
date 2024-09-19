@@ -57,21 +57,23 @@ export default defineConfig({
     // },
 
     // },
-    {
-      name: "chromium",
-       dependencies: ["init DB Connection"],
-      use: {
-        ...devices["Desktop Chrome"],
-        testIdAttribute: "data-test",
-        launchOptions: {
-          args: ["--start-maximized"],
-        },
+  //  {
+     // name: "chromium",
+    //  dependencies: ["init DB Connection"],
+   //   use: {
+     //   ...devices["Desktop Chrome"], 
+    //    channel: 'chrome',
+    //    testIdAttribute: "data-test"
+       // launchOptions: {
+       //
+       //   headless: false
+     //   },
 
         //connectOptions: {
         // wsEndpoint: "ws://playwright-ui-typescript-pw-server-1:3000/"
         //}
-      },
-    },
+   ////   },
+   // },
      {
        name: "init DB Connection",
        testMatch: '**/setup.ts',
@@ -80,7 +82,7 @@ export default defineConfig({
      {
         name: 'close DB',
        testMatch: '**/teardown.ts'
-       }
+       },
 
     /* Test against mobile viewports. */
     // {
@@ -93,10 +95,12 @@ export default defineConfig({
     // },
 
     /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
+    {
+      name: 'Microsoft Edge',
+      dependencies: ["init DB Connection"],
+      
+      use: { ...devices['Desktop Edge'], channel: 'msedge', headless: false, testIdAttribute: "data-test" },
+     },
     // {
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
