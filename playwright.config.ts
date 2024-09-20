@@ -45,18 +45,17 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    // {
-    //   name: 'Sauce Demo - Chrome',
-    //  use: {
-    // ...devices['Desktop Chrome'],
-    // channel: 'chrome',
-    //testIdAttribute: 'data-test',
-    //launchOptions:{
-    //  args: ['--start-maximized']
-    // }
-    // },
-
-    // },
+     {
+       name: 'Sauce Demo - Chrome',
+      use: {
+            ...devices['Desktop Chrome'],
+            channel: 'chrome',
+            testIdAttribute: 'data-test',
+            launchOptions:{
+                      args: ['--start-maximized']
+                           }
+            }
+     },
   //  {
      // name: "chromium",
     //  dependencies: ["init DB Connection"],
@@ -82,7 +81,7 @@ export default defineConfig({
      {
         name: 'close DB',
        testMatch: '**/teardown.ts'
-       },
+       }
 
     /* Test against mobile viewports. */
     // {
@@ -95,12 +94,12 @@ export default defineConfig({
     // },
 
     /* Test against branded browsers. */
-    {
-      name: 'Microsoft Edge',
-      dependencies: ["init DB Connection"],
+    //{
+   //   name: 'Microsoft Edge',
+   //   dependencies: ["init DB Connection"],
       
-      use: { ...devices['Desktop Edge'], channel: 'msedge', headless: false, testIdAttribute: "data-test" },
-     },
+   //   use: { ...devices['Desktop Edge'], channel: 'msedge', headless: false, testIdAttribute: "data-test" },
+   //  },
     // {
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
