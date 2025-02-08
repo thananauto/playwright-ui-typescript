@@ -1,5 +1,5 @@
 import { expect, type Page, type Locator } from "@playwright/test";
-import exp from "constants";
+import { Steps } from "@/utilities/stepdecorator";
 
 export default class HomePage {
   readonly page: Page;
@@ -7,11 +7,14 @@ export default class HomePage {
     this.page = page;
   }
 
+
+  @Steps("Launch the app with {args}")
   async launchApp(url: any) {
     await this.page.goto(url);
     await expect(this.page.getByText("Swag Labs")).toBeVisible();
   }
 
+  @Steps("Login with {username} and {password}")
   async login(username: string, password: string) {
     await this.page.locator('[data-test="username"]').fill(username);
     await this.page.locator('[data-test="password"]').fill(password);
@@ -19,6 +22,7 @@ export default class HomePage {
     await expect(this.page.getByText("Swag Labs")).toBeVisible();
   }
 
+  @Steps("Click on the Jacket")
   async clickJacket() {
     await this.page
       .getByTestId("inventory-item-name")

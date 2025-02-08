@@ -1,5 +1,5 @@
 import { type Page, expect } from "@playwright/test";
-import exp from "constants";
+import { Steps } from "@/utilities/stepdecorator";
 
 export default class ProductCartPage {
   readonly page: Page;
@@ -8,6 +8,7 @@ export default class ProductCartPage {
     this.page = page;
   }
 
+  @Steps("Validate the Product Info Page")
   async validateProductInfoPage() {
     await expect(this.page.getByTestId("inventory-item-name")).toBeVisible();
     await expect(this.page.getByTestId("inventory-item-desc")).toBeVisible();
@@ -19,6 +20,7 @@ export default class ProductCartPage {
     await expect(this.page.getByTestId("back-to-products")).toBeVisible();
   }
 
+  @Steps("Click the Cart")
   async clickCart() {
     await this.page.getByTestId("shopping-cart-link").click();
     await expect(this.page.getByTestId("title")).toHaveText("Your Cart", {
@@ -26,10 +28,12 @@ export default class ProductCartPage {
     });
   }
 
+  @Steps("Remove item from Cart")
   async removeItemCart() {
     await this.page.getByRole("button", { name: "Remove" }).click();
   }
 
+  @Steps("Empty Cart")
   async emptyCart() {
     await expect(this.page.getByTestId("inventory-item")).not.toBeVisible();
     await expect(this.page.locator(".shopping_cart_badge")).not.toBeVisible();

@@ -6,6 +6,7 @@ Sample set of UI test cases build for the website [saucedemo](https://saucedemo.
 * Mongo DB database integration
 * Test Trend by Influx DB 2.0
 * Dockerfile
+* Jenkins pipeline
 * Github Actions Workflow
 * Kubernetes
 
@@ -20,6 +21,8 @@ By using  the custom reporter of playwright, we can easily feed  the summary res
 ### Dockerfile
 If you want to build and run the test case in `Docker` environment. Clone this repo and to build the image
 `docker build -t <name>:<tag> .` and run these command for test execution `docker run -it -v $(pwd)/report:/app/playwright-report <name>:<tag> -c "npx playwright test"`
+### Jenkins
+Execute the test inside the docker container from Jenkins pipeline and test-results will be archived for each job build.
 
 ### Github Actions Workflow
 For continious integration we can easily accomodate the playwright test execution in github action workflow
@@ -40,3 +43,7 @@ For more details, refer these blogs
 * [Live Visualization of Test Results Using Playwright and InfluxDB 2.0](https://medium.com/@thananjayan1988/live-visualization-of-test-results-using-playwright-and-influxdb-2-0-2a193656dda2)
 * [Integrating Playwright in CI with GitHub Actions and Docker](https://medium.com/@thananjayan1988/integrating-playwright-in-ci-with-github-actions-and-docker-7baafe76de99)
 * [Containerized Browser Testing with Playwright on Kubernetes](https://medium.com/@thananjayan1988/containerized-browser-testing-with-playwright-on-kubernetes-09743e5d2362)
+* [Load Page Object class dynamically ](https://medium.com/@thananjayan1988/optimizing-playwright-tests-with-dynamic-page-object-loading-dfda67be81e4)
+* [Running playwright tests from Jenkins](https://medium.com/@thananjayan1988/ci-cd-pipeline-running-playwright-tests-in-jenkins-with-docker-f9f08fda4bfc)
+* [Add build details of CI to report](https://medium.com/@thananjayan1988/how-playwright-metadata-elevates-reporting-in-ci-cd-5f4460b7b795)
+* [Execute playwright test in Aerokube moon](https://medium.com/devops-dev/deploying-aerokube-moon-for-browser-automation-with-playwright-using-helm-20ece0964048)

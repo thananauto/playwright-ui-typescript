@@ -1,4 +1,5 @@
 import { expect, type Page, type Locator, request } from "@playwright/test";
+import { Steps } from "@/utilities/stepdecorator";
 
 export default class ProductInfo {
   readonly page: Page;
@@ -7,6 +8,7 @@ export default class ProductInfo {
     this.page = page;
   }
 
+  @Steps("Validate remove or add to cart button")
   async validateRemoveOrAddToCart() {
     const addToCart = this.page.getByRole("button", { name: "Add to cart" });
     const removeButton = this.page.getByRole("button", { name: "Add to cart" });
@@ -15,6 +17,7 @@ export default class ProductInfo {
     buttons.forEach(async (ele) => await expect.soft(ele).toBeVisible());
   }
 
+  @Steps("Validate all items have price")
   async validateAllItemsHavePrice() {
     //all products have the $ price symbol
     for (const li of await this.page
@@ -24,6 +27,7 @@ export default class ProductInfo {
       await expect.soft(li).toHaveText(/\$\d{1,3}\.\d{0,2}/);
   }
 
+  @Steps("Validate all items have valid images")
   async validateAllHaveValidImages() {
     //get all images
     const images = await this.page.locator("img.inventory_item_img").all();
@@ -44,6 +48,7 @@ export default class ProductInfo {
     );
   }
 
+  @Steps("Validate all items have description")
   async validateLowToHighPrice() {
     await this.page
       .locator('[data-test="product-sort-container"]')
@@ -54,6 +59,7 @@ export default class ProductInfo {
     );
   }
 
+  @Steps("Click an item")
   async clickAnItem(item: string) {
     const product = this.page
       .locator(".inventory_item", { hasText: item })

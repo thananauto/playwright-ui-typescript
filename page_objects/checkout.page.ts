@@ -1,4 +1,5 @@
 import { type Page, expect } from "@playwright/test";
+import { Steps } from "@/utilities/stepdecorator";
 
 export default class Checkout {
   readonly page: Page;
@@ -7,10 +8,11 @@ export default class Checkout {
     this.page = page;
   }
 
+  @Steps("Click the checkout button")
   async clickCheckout() {
     await this.page.getByTestId("checkout").click();
   }
-
+@Steps("Enter the address with {firstname}, {lastname} and {postcode}")
   async enterAddress(firstname: string, lastname: string, postcode: string) {
     await this.page.getByTestId("firstName").fill(firstname);
     await this.page.getByTestId("lastName").fill(lastname);
@@ -18,16 +20,19 @@ export default class Checkout {
     await this.page.getByRole("button", { name: "Continue" }).click();
   }
 
+  @Steps("Checkout overview")
   async checkoutOverview() {
     await expect(this.page.getByTestId("payment-info-label")).toBeVisible();
     await expect(this.page.getByTestId("shipping-info-label")).toBeVisible();
     await expect(this.page.getByTestId("total-info-label")).toBeVisible();
   }
 
+  @Steps("Finish the checkout")
   async finishCheckout() {
     await this.page.getByRole("button", { name: "Finish" }).click();
   }
 
+  @Steps("Order completion")
   async orderCompletion() {
     await expect(this.page.getByTestId("complete-header")).toHaveText(
       "Thank you for your order!",
