@@ -1,5 +1,6 @@
 import { defineConfig, devices } from "@playwright/test";
 import dotenv from "dotenv";
+//import { rpConfig } from "./rpConfig";
 
 /**
  * Read environment variables from file.
@@ -25,11 +26,12 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined, //,['.\\custom_report\\customreporter.ts']
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */ //['./custom_report/customreporter.ts']
+  /* Reporter to use. See https://playwright.dev/docs/test-reporters */ 
   reporter: [
     ["html", { outputFolder: `./playwright-report/${timestamp}` }],
     ["list"],
     ["./custom_report/customreporter.ts"],
+    //['@reportportal/agent-js-playwright', rpConfig],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {

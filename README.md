@@ -9,7 +9,7 @@ Sample set of UI test cases build for the website [saucedemo](https://saucedemo.
 * Jenkins pipeline
 * Github Actions Workflow
 * Kubernetes
-
+* ReportPortal - Live execution
 
 ### Local copy
 Just clone this repo and run these commands `npm install` for dowload all dependencies and run `npx playwright test`.
