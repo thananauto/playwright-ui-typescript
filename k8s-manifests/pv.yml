@@ -13,4 +13,4 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/test/output/result"
+    path: '/test/output/result'

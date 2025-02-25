@@ -1,0 +1,14 @@
+# Add files to this list to exclude them from Prettier formatting:
+
+/.cloudbees
+/.github
+/.husky
+
+/allure-results
+/env
+/adr
+/docs
+/Logs
+/playwright-report
+/test-results
+/node_modules

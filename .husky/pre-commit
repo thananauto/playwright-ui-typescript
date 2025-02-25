@@ -1,0 +1,3 @@
+# Format uncommitted files and add them to the commit
+npx lint-staged --concurrent false --verbose
+

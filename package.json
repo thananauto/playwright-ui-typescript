@@ -8,17 +8,36 @@
     "test:full": "npx playwright test",
     "test:debug": "npx playwright test  --ui",
     "test:e2e": "npx playwright test --grep @e2e",
-    "prettier:format": "npx prettier . --write"
+    "type:check": "tsc --noEmit",
+    "prettier:format": "npx prettier --write --ignore-unknown **/*",
+    "prettier:check": "prettier --check --ignore-unknown **/*",
+    "lint:fix": "eslint --fix */**/*.{js,ts}",
+    "lint:check": "eslint */**/*.{js,ts}",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*/**/*.{js,ts}": "npx eslint --fix",
+    "**/*": "prettier --write --ignore-unknown",
+    "*/**/*.ts": "bash -c 'tsc --noEmit'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@eslint/js": "^9.1.1",
     "@playwright/test": "^1.43.1",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.12.7",
+    "eslint": "^8.57.1",
+    "eslint-plugin-ascii": "^2.0.0",
+    "eslint-plugin-jsonc": "^2.19.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.1.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.2",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.8.0"
   },

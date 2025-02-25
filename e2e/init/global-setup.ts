@@ -1,7 +1,7 @@
-import { dbSingleton } from "@utilities/mongoclient";
+import { dbSingleton } from '@utilities/mongoclient'
 
 async function setup() {
-  console.log("set up DB client instance ......");
-  await dbSingleton.getClient();
+  console.log('set up DB client instance ......')
+  await dbSingleton.getClient()
 }
-export default setup;
+export default setup

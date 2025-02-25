@@ -18,7 +18,7 @@ spec:
       containers:
         - name: sample-ui-test
           image: thanandock/playwright-ui-typescript:latest
-          args: ["-c", "npx playwright test"]
+          args: ['-c', 'npx playwright test']
           volumeMounts:
             - name: storage
               mountPath: /app/playwright-report

@@ -1,19 +1,19 @@
-import * as fs from "fs";
+import * as fs from 'fs'
 
 export class ReadData {
-  private file: string;
+  private file: string
   constructor() {
-    this.file = "data.json";
+    this.file = 'data.json'
   }
 
   setFile(fileName: string) {
-    this.file = fileName;
+    this.file = fileName
   }
 
   getFile() {
-    const loadedConfig = fs.readFileSync(`test_data/${this.file}`, "utf-8");
-    const config = JSON.parse(loadedConfig);
-    return config;
+    const loadedConfig = fs.readFileSync(`test_data/${this.file}`, 'utf-8')
+    const config = JSON.parse(loadedConfig)
+    return config
   }
 }
 
