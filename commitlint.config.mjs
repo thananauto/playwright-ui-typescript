@@ -1,7 +1,7 @@
 export default {
   parserPreset: {
     parserOpts: {
-      headerPattern: /^\[(QA|PROD|PREPROD)\]\[([A-Za-z0-9_]+(\|[A-Za-z0-9_]+)*)\] - (.+)$/,
+      headerPattern: /^\[(QA|TEST|STAGE)\]\[([A-Za-z0-9_]+(\|[A-Za-z0-9_]+)*)\] - (.+)$/,
       headerCorrespondence: ['issue', 'title'],
     },
   },
@@ -12,7 +12,7 @@ export default {
           issue === null || title === null
             ? [
                 false,
-                "Commit message pattern should be in the form of [QA|PROD|PREPROD][TEST_CASE_TAGS] - message \n for example: [PREPROD][Smoke] - Fixed login cases \n For 'TEST_CASE_TAGS' refer path 'utils/testTags.ts\n For multiple test tags use with '|' symbol\n for example: [QA][Smoke|ActionTest|EnvironmentTest] - Fixed cases",
+                "Commit message pattern should be in the form of [QA|TEST|STAGE][TEST_CASE_TAGS] - message \n for example: [STAGE][Smoke] - Fixed login cases \n For 'TEST_CASE_TAGS' refer the annotation name of testsl\n for example: [QA][Smoke|Home|Cart] - Fixed cases",
               ]
             : [true, ''],
       },

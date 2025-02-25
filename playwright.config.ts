@@ -1,5 +1,5 @@
-import { defineConfig, devices } from "@playwright/test";
-import dotenv from "dotenv";
+import { defineConfig, devices } from '@playwright/test'
+import dotenv from 'dotenv'
 //import { rpConfig } from "./rpConfig";
 
 /**
@@ -8,17 +8,13 @@ import dotenv from "dotenv";
  */
 // require('dotenv').config();
 
-dotenv.config();
-const timestamp = new Date(Date.now())
-  .toUTCString()
-  .replace(/ /gi, "_")
-  .replace(/:/gi, "")
-  .replace(/,/gi, "");
+dotenv.config()
+const timestamp = new Date(Date.now()).toUTCString().replace(/ /gi, '_').replace(/:/gi, '').replace(/,/gi, '')
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: "./e2e" /* Run tests in files in parallel */,
+  testDir: './e2e' /* Run tests in files in parallel */,
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
@@ -26,64 +22,64 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined, //,['.\\custom_report\\customreporter.ts']
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */ 
+  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ["html", { outputFolder: `./playwright-report/${timestamp}` }],
-    ["list"],
-    ["./custom_report/customreporter.ts"],
+    ['html', { outputFolder: `./playwright-report/${timestamp}` }],
+    ['list'],
+    ['./custom_report/customreporter.ts'],
     //['@reportportal/agent-js-playwright', rpConfig],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: "https://www.saucedemo.com",
+    baseURL: 'https://www.saucedemo.com',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: "on",
-    screenshot: "only-on-failure",
+    trace: 'on',
+    screenshot: 'only-on-failure',
   },
   //globalSetup: require.resolve('./e2e/init/global-setup'),
   //globalTeardown: require.resolve('./e2e/init/global-teardown'),
 
   /* Configure projects for major browsers */
   projects: [
-     {
-       name: 'Sauce Demo - Chrome',
+    {
+      name: 'Sauce Demo - Chrome',
       use: {
-            ...devices['Desktop Chrome'],
-            channel: 'chrome',
-            testIdAttribute: 'data-test',
-            launchOptions:{
-                      args: ['--start-maximized']
-                           }
-            }
-     },
-  //  {
-     // name: "chromium",
+        ...devices['Desktop Chrome'],
+        channel: 'chrome',
+        testIdAttribute: 'data-test',
+        launchOptions: {
+          args: ['--start-maximized'],
+        },
+      },
+    },
+    //  {
+    // name: "chromium",
     //  dependencies: ["init DB Connection"],
-   //   use: {
-     //   ...devices["Desktop Chrome"], 
+    //   use: {
+    //   ...devices["Desktop Chrome"],
     //    channel: 'chrome',
     //    testIdAttribute: "data-test"
-       // launchOptions: {
-       //
-       //   headless: false
-     //   },
+    // launchOptions: {
+    //
+    //   headless: false
+    //   },
 
-        //connectOptions: {
-        // wsEndpoint: "ws://playwright-ui-typescript-pw-server-1:3000/"
-        //}
-   ////   },
-   // },
-     {
-       name: "init DB Connection",
-       testMatch: '**/setup.ts',
-        teardown: 'close DB'
-     },
-     {
-        name: 'close DB',
-       testMatch: '**/teardown.ts'
-       }
+    //connectOptions: {
+    // wsEndpoint: "ws://playwright-ui-typescript-pw-server-1:3000/"
+    //}
+    ////   },
+    // },
+    {
+      name: 'init DB Connection',
+      testMatch: '**/setup.ts',
+      teardown: 'close DB',
+    },
+    {
+      name: 'close DB',
+      testMatch: '**/teardown.ts',
+    },
 
     /* Test against mobile viewports. */
     // {
@@ -97,11 +93,11 @@ export default defineConfig({
 
     /* Test against branded browsers. */
     //{
-   //   name: 'Microsoft Edge',
-   //   dependencies: ["init DB Connection"],
-      
-   //   use: { ...devices['Desktop Edge'], channel: 'msedge', headless: false, testIdAttribute: "data-test" },
-   //  },
+    //   name: 'Microsoft Edge',
+    //   dependencies: ["init DB Connection"],
+
+    //   use: { ...devices['Desktop Edge'], channel: 'msedge', headless: false, testIdAttribute: "data-test" },
+    //  },
     // {
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
@@ -114,4 +110,4 @@ export default defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
-});
+})
