@@ -1,83 +1,113 @@
-# playwright-ui-typescript
+# Playwright UI Test Automation with TypeScript  
 
-Sample set of UI test cases build for the website [saucedemo](https://saucedemo.com). This repo can showcase that how this repo can
-integrate or use with other tools
+A comprehensive suite of UI test cases built using Playwright for the [SauceDemo](https://saucedemo.com) website. This repository demonstrates how Playwright can seamlessly integrate with various tools and technologies for efficient test execution, reporting, and CI/CD automation.  
 
-## Table of contents
+## Table of Contents  
+- [Getting Started](#getting-started)  
+- [Database Integration](#database-integration)  
+- [Test Trend Analysis with InfluxDB 2.0](#test-trend-analysis-with-influxdb-20)  
+- [Docker Integration](#docker-integration)  
+- [Jenkins Pipeline](#jenkins-pipeline)  
+- [GitHub Actions Workflow](#github-actions-workflow)  
+- [Kubernetes Deployment](#kubernetes-deployment)  
+- [Live Test Execution with ReportPortal](#live-test-execution-with-reportportal)  
+- [Code Quality with Husky](#code-quality-with-husky)  
+- [Related Blogs & Resources](#related-blogs--resources)  
 
-- Local copy
-- Mongo DB database integration
-- Test Trend by Influx DB 2.0
-- Dockerfile
-- Jenkins pipeline
-- Github Actions Workflow
-- Kubernetes
-- ReportPortal - Live execution
-- Husky - Prettier, Linted-stage and Commit lint
+## Getting Started  
 
-### Local copy
+### Clone and Run Locally  
+Clone the repository and install dependencies:  
+```sh  
+git clone https://github.com/thananauto/playwright-ui-typescript.git  
+cd playwright-ui-typescript  
+npm install  
+npx playwright test  
+```  
+Test reports will be generated with timestamps at:  
+```sh  
+./playwright-report/<timestamp>/  
+```  
 
-Just clone this repo and run these commands `npm install` for dowload all dependencies and run `npx playwright test`. You can find the
-report in this path with timestamp `./playwright-report/<timestamp>`
+## Database Integration  
 
-### Test Trend - Influx DB 2.0
+### Test Trend Analysis with InfluxDB 2.0  
+Playwright's custom reporter allows test summary results to be stored in a time-series database like InfluxDB 2.0.  
 
-By using the custom reporter of playwright, we can easily feed the summary result to any time series database. Here it used the docker image
-to build and run the server, refer `docker-compose.yml` for setup. And also see the `./custom_report` folder for code configuration.
+- Set up InfluxDB using Docker by referring to `docker-compose.yml`.  
+- Configure the integration using files in `./custom_report`.  
 
-### Dockerfile
+## Docker Integration  
 
-If you want to build and run the test case in `Docker` environment. Clone this repo and to build the image `docker build -t <name>:<tag> .`
-and run these command for test execution `docker run -it -v $(pwd)/report:/app/playwright-report <name>:<tag> -c "npx playwright test"`
+To run tests inside a Docker container:  
 
-### Jenkins
+1. Build the Docker image:  
+   ```sh  
+   docker build -t playwright-tests .  
+   ```  
+2. Run tests inside the container:  
+   ```sh  
+   docker run -it -v $(pwd)/report:/app/playwright-report playwright-tests -c "npx playwright test"  
+   ```  
 
-Execute the test inside the docker container from Jenkins pipeline and test-results will be archived for each job build.
+## Jenkins Pipeline  
 
-### Github Actions Workflow
+Execute tests inside a Docker container through a Jenkins pipeline. The pipeline archives test results for each build.  
 
-For continious integration we can easily accomodate the playwright test execution in github action workflow
+## GitHub Actions Workflow  
 
-1. Execute playwright test directly in git hosted linux server. Refer this
-   [flow](https://github.com/thananauto/playwright-ui-typescript/blob/main/.github/workflows/playwright-test.yml)
-2. Build the image and push to docker hub, refer this
-   [flow](https://github.com/thananauto/playwright-ui-typescript/blob/main/.github/workflows/docker-registry.yml)
-3. Pull the image from docker hub and execute the test, refer this
-   [flow](https://github.com/thananauto/playwright-ui-typescript/blob/main/.github/workflows/test-from-docker.yml)
+For continuous integration, GitHub Actions can execute Playwright tests seamlessly.  
 
-### Kubernetes
+1. **Run tests in a GitHub-hosted Linux server**:  [Workflow](https://github.com/thananauto/playwright-ui-typescript/blob/main/.github/workflows/playwright-test.yml)  
+2. **Build and push Docker image to Docker Hub**:  [Workflow](https://github.com/thananauto/playwright-ui-typescript/blob/main/.github/workflows/docker-registry.yml)  
+3. **Pull Docker image and execute tests**:  [Workflow](https://github.com/thananauto/playwright-ui-typescript/blob/main/.github/workflows/test-from-docker.yml)  
 
-If you would like to execute the test inside the kubernetes pod refer these manifest file
+## Kubernetes Deployment  
 
-1. For Persistent Volume to save to test results, refer
-   [this](https://github.com/thananauto/playwright-ui-typescript/blob/main/k8s-manifests/pv.yml).
-2. Allow the pod to share the memory with host using persistent valume claim, refer
-   [this](https://github.com/thananauto/playwright-ui-typescript/blob/main/k8s-manifests/pvc.yml).
-3. Deploy the job to execute the test inside the image, refer
-   [this](https://github.com/thananauto/playwright-ui-typescript/blob/main/k8s-manifests/job.yml).
+Execute Playwright tests within a Kubernetes environment using the provided manifest files:  
 
-### Report Portal - Live execution
-To setup a report portal instance with docker refer this [yaml](https://github.com/thananauto/playwright-ui-typescript/blob/main/docker-compose-reportportal.yml), Just run docker compose `docker compose -f docker-compose-reportportal.yml up`
-Add the configuration and environment details in `rpConfig.ts` and `.env.rp`
-Add this reporter type `['@reportportal/agent-js-playwright', rpConfig]` in `playwright.config.ts`
+1. **Persistent Volume for test results**:  [pv.yml](https://github.com/thananauto/playwright-ui-typescript/blob/main/k8s-manifests/pv.yml)  
+2. **Persistent Volume Claim**:  [pvc.yml](https://github.com/thananauto/playwright-ui-typescript/blob/main/k8s-manifests/pvc.yml)  
+3. **Deploy job for test execution**:  [job.yml](https://github.com/thananauto/playwright-ui-typescript/blob/main/k8s-manifests/job.yml)  
 
-### Husky code commit
-If you are going to wotking as a team, this library helps and enforces the team to follow coding style, allow the user to write clean code. This is straight forward, please refer the [documentation](https://typicode.github.io/husky/)
-Here I used some customised pattern like from every commit any one can understand ex: `[QA][Smoke] - Fixed Smoke test` it's clearly says these commit from QA environment with Smoke test fixes. I wrote a separate [blog](https://medium.com/@thananjayan1988/apply-custom-rules-for-git-commit-messages-husky-6743680366be) about this.
+## Live Test Execution with ReportPortal  
 
-## For more details, refer these blogs
-- [Executing Tests on Remote Browser and Browser in Servers](https://medium.com/@thananjayan1988/playwright-executing-tests-on-remote-browser-and-browser-in-servers-48c9979b5b4f)
-- [Reusing Browser Sessions for Debugging in Playwright](https://medium.com/@thananjayan1988/reusing-browser-sessions-for-debugging-in-playwright-bac94cd6d999)
-- [Efficient Playwright test execution in minimal docker images](https://medium.com/@thananjayan1988/optimize-the-docker-image-for-playwright-tests-3688c7d4be5f)
-- [Live Visualization of Test Results Using Playwright and InfluxDB 2.0](https://medium.com/@thananjayan1988/live-visualization-of-test-results-using-playwright-and-influxdb-2-0-2a193656dda2)
-- [Integrating Playwright in CI with GitHub Actions and Docker](https://medium.com/@thananjayan1988/integrating-playwright-in-ci-with-github-actions-and-docker-7baafe76de99)
-- [Containerized Browser Testing with Playwright on Kubernetes](https://medium.com/@thananjayan1988/containerized-browser-testing-with-playwright-on-kubernetes-09743e5d2362)
-- [Load Page Object class dynamically ](https://medium.com/@thananjayan1988/optimizing-playwright-tests-with-dynamic-page-object-loading-dfda67be81e4)
-- [Running playwright tests from Jenkins](https://medium.com/@thananjayan1988/ci-cd-pipeline-running-playwright-tests-in-jenkins-with-docker-f9f08fda4bfc)
-- [Add build details of CI to report](https://medium.com/@thananjayan1988/how-playwright-metadata-elevates-reporting-in-ci-cd-5f4460b7b795)
-- [Execute playwright test in Aerokube moon](https://medium.com/devops-dev/deploying-aerokube-moon-for-browser-automation-with-playwright-using-helm-20ece0964048)
-- [Enhance Playwright Test Report with decorators](https://medium.com/@thananjayan1988/how-to-enhance-the-playwright-html-report-using-test-step-with-typescript-decorator-4b45797a3031)
-- [Running test in Jenkins pipeline with docker container](https://medium.com/@thananjayan1988/ci-cd-pipeline-running-playwright-tests-in-jenkins-with-docker-f9f08fda4bfc)
+To enable real-time test execution monitoring with ReportPortal:  
 
+1. Start ReportPortal using Docker:  
+   ```sh  
+   docker compose -f docker-compose-reportportal.yml up  
+   ```  
+2. Configure `rpConfig.ts` and `.env.rp` with ReportPortal details.  
+3. Add the reporter type in `playwright.config.ts`:  
+   ```ts  
+   reporters: [['@reportportal/agent-js-playwright', rpConfig]]  
+   ```  
 
+## Code Quality with Husky  
 
+Husky enforces code quality by ensuring consistent commit messages and code formatting.  
+
+- Prettier for code formatting  
+- Lint-staged for staged file validation  
+- Commit lint to enforce commit message conventions  
+
+For structured commits, follow this format:  
+```sh  
+[QA][Smoke] - Fixed Smoke test  
+```  
+This indicates that the commit is related to the QA environment and includes a smoke test fix.  
+
+**For more details, check this blog:**  
+[Custom Git Commit Rules with Husky](https://medium.com/@thananjayan1988/apply-custom-rules-for-git-commit-messages-husky-6743680366be)  
+
+## Related Blogs & Resources  
+
+- [Executing Tests on Remote Browser and Browser in Servers](https://medium.com/@thananjayan1988/playwright-executing-tests-on-remote-browser-and-browser-in-servers-48c9979b5b4f)  
+- [Reusing Browser Sessions for Debugging in Playwright](https://medium.com/@thananjayan1988/reusing-browser-sessions-for-debugging-in-playwright-bac94cd6d999)  
+- [Optimizing Playwright Test Execution in Minimal Docker Images](https://medium.com/@thananjayan1988/optimize-the-docker-image-for-playwright-tests-3688c7d4be5f)  
+- [Live Visualization of Test Results Using Playwright and InfluxDB 2.0](https://medium.com/@thananjayan1988/live-visualization-of-test-results-using-playwright-and-influxdb-2-0-2a193656dda2)  
+- [CI/CD Pipeline: Running Playwright Tests in Jenkins with Docker](https://medium.com/@thananjayan1988/ci-cd-pipeline-running-playwright-tests-in-jenkins-with-docker-f9f08fda4bfc)  
+- [Enhancing Playwright Test Reports with Decorators](https://medium.com/@thananjayan1988/how-to-enhance-the-playwright-html-report-using-test-step-with-typescript-decorator-4b45797a3031)  
+
+For a complete list of related blogs, check out [Medium](https://medium.com/@thananjayan1988).  
