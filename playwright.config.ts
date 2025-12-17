@@ -37,9 +37,15 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on',
     screenshot: 'only-on-failure',
+    proxy: {
+      server: process.env.PROXY_SERVER || 'http://localhost:8080',
+    },
+    ignoreHTTPSErrors: true,
   },
   //globalSetup: require.resolve('./e2e/init/global-setup'),
   //globalTeardown: require.resolve('./e2e/init/global-teardown'),
+  //globalSetup: require.resolve('./e2e/init/global-setup-zap'), //uncomment when zap needs to passive scan
+  //globalTeardown: require.resolve('./e2e/init/global-teardown-zap'), //uncomment when zap needs to passive scan
 
   /* Configure projects for major browsers */
   projects: [
