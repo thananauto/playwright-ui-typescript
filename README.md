@@ -110,7 +110,8 @@ For structured commits, follow this format:
 [QA][Smoke] - Fixed Smoke test
 ```
 
-This indicates that the commit is related to the QA environment and includes a smoke test fix.
+This indicates that the commit is related to the QA environment and includes a smoke test fix. **For more details, check this blog:**  
+[Custom Git Commit Rules with Husky](https://medium.com/@thananjayan1988/apply-custom-rules-for-git-commit-messages-husky-6743680366be)
 
 ## Passive Scan Zap
 
@@ -120,8 +121,13 @@ By using OWAS ZAP, we can do passive scan along with automated tests, by doing s
 - Security Misconfigurations (like missing HTTP headers).
 - Reflected XSS (Cross-Site Scripting) in the browser.
 
-**For more details, check this blog:**  
-[Custom Git Commit Rules with Husky](https://medium.com/@thananjayan1988/apply-custom-rules-for-git-commit-messages-husky-6743680366be)
+## Datadog Integration
+
+By using the Datadog Test Optimization and Real User Monitoring(RUM) with playwright
+
+- Visual session replays
+- Falky test detection
+- XHR and JS error detection and analysis
 
 ## Related Blogs & Resources
 
