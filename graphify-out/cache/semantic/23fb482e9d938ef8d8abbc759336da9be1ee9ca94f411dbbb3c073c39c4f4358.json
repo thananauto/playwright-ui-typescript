@@ -1,0 +1,49 @@
+{
+  "nodes": [
+    {
+      "id": "_claude_skills_playwright_cli_references_playwright_tests_md_run_debug_tests",
+      "label": "Running and Debugging Playwright Tests",
+      "file_type": "document",
+      "source_file": ".claude/skills/playwright-cli/references/playwright-tests.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_playwright_cli_references_playwright_tests_md_debug_cli_mode",
+      "label": "Debug CLI Mode (--debug=cli)",
+      "file_type": "concept",
+      "source_file": ".claude/skills/playwright-cli/references/playwright-tests.md",
+      "source_location": "# Debugging Playwright Tests",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "_claude_skills_playwright_cli_references_playwright_tests_md_run_debug_tests",
+      "target": "_claude_skills_playwright_cli_references_playwright_tests_md_debug_cli_mode",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/playwright-cli/references/playwright-tests.md",
+      "source_location": "# Debugging Playwright Tests",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_playwright_cli_references_playwright_tests_md_debug_cli_mode",
+      "target": "_claude_skills_playwright_cli_skill_md_browser_sessions",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/playwright-cli/references/playwright-tests.md",
+      "source_location": "Attach to the test",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": []
+}

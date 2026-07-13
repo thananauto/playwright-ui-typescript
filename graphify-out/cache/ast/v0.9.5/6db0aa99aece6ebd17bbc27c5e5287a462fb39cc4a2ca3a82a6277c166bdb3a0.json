@@ -1,0 +1,31 @@
+{
+  "nodes": [
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_husky_husky_sh",
+      "label": "husky.sh",
+      "file_type": "code",
+      "source_file": ".husky/_/husky.sh",
+      "source_location": "L1",
+      "metadata": { "language": "bash", "kind": "file" }
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_husky_husky_sh__entry",
+      "label": "husky.sh script",
+      "file_type": "code",
+      "source_file": ".husky/_/husky.sh",
+      "source_location": "L1",
+      "metadata": { "language": "bash", "kind": "bash_entrypoint" }
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_husky_husky_sh",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_husky_husky_sh__entry",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".husky/_/husky.sh",
+      "source_location": "L1",
+      "weight": 1.0
+    }
+  ]
+}

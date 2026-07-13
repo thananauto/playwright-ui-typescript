@@ -4,6 +4,8 @@ A comprehensive suite of UI test cases built using Playwright for the [SauceDemo
 demonstrates how Playwright can seamlessly integrate with various tools and technologies for efficient test execution, reporting, and CI/CD
 automation.
 
+`uv tool install graphifyy`
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)

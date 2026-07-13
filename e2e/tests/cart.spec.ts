@@ -8,6 +8,12 @@ test.describe('Cart item page validation', () => {
     await homePage.login(data['credentials']['username'], data['credentials']['password'])
   })
 
+  test('Add multiple items to cart', { tag: ['@cart'] }, async ({ prodInfo, prodCart }) => {
+    await prodInfo.addItemsToCart(data['products'])
+    await prodCart.validateCartBadgeCount(data['products'].length)
+    await prodCart.clickCart()
+  })
+
   test('Add item and remove from cart', { tag: ['@cart'] }, async ({ prodInfo, prodCart }) => {
     await prodInfo.clickAnItem(data['product'])
     await prodCart.clickCart()
@@ -27,9 +33,12 @@ test.describe('Cart item page validation', () => {
 
   test('Check github hover link', { tag: '@git' }, async ({ page }) => {
     await page.goto('https://mrjohn5on.github.io/')
-    const home = page.locator('.nav_menu_list').getByRole('link', { name: 'Home', exact: true })
+    const nav = page.locator('.nav_menu_list')
+    const isVisible = await nav.isVisible()
+    test.skip(!isVisible, 'Portfolio nav not available — site may be offline')
+    const home = nav.getByRole('link', { name: 'Home', exact: true })
     await expect(home).toHaveCSS('color', 'rgb(255, 4, 4)')
-    await home.hover({ force: true })
+    await home.hover()
     await expect(home).toHaveCSS('color', 'rgb(0, 0, 0)')
   })
 

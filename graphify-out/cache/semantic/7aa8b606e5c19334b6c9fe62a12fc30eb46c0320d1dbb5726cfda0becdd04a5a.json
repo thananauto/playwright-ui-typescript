@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "_claude_skills_graphify_references_exports_md_wiki_export",
+      "label": "Wiki Export",
+      "file_type": "document",
+      "source_file": ".claude/skills/graphify/references/exports.md",
+      "source_location": "### Step 6b",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_references_exports_md_neo4j_export",
+      "label": "Neo4j Export",
+      "file_type": "document",
+      "source_file": ".claude/skills/graphify/references/exports.md",
+      "source_location": "### Step 7",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_references_exports_md_falkordb_export",
+      "label": "FalkorDB Export",
+      "file_type": "document",
+      "source_file": ".claude/skills/graphify/references/exports.md",
+      "source_location": "### Step 7a",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_references_exports_md_mcp_server",
+      "label": "MCP Server Export",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/references/exports.md",
+      "source_location": "### Step 7d",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_references_exports_md_token_benchmark",
+      "label": "Token Reduction Benchmark",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/references/exports.md",
+      "source_location": "### Step 8",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "_claude_skills_graphify_references_exports_md_neo4j_export",
+      "target": "_claude_skills_graphify_references_exports_md_falkordb_export",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".claude/skills/graphify/references/exports.md",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": []
+}

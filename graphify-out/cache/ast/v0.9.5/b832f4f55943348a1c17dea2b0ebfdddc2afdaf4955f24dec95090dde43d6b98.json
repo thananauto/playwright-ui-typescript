@@ -1,0 +1,979 @@
+{
+  "nodes": [
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_version",
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_description",
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_main",
+      "label": "main",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_test_htmlreport",
+      "label": "test:htmlreport",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_test_full",
+      "label": "test:full",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_test_debug",
+      "label": "test:debug",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_test_e2e",
+      "label": "test:e2e",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_type_check",
+      "label": "type:check",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_prettier_format",
+      "label": "prettier:format",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_prettier_check",
+      "label": "prettier:check",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_lint_fix",
+      "label": "lint:fix",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_lint_check",
+      "label": "lint:check",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_prepare",
+      "label": "prepare",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_lint_staged",
+      "label": "lint-staged",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_lint_staged_js_ts",
+      "label": "*/**/*.{js,ts}",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_lint_staged_ts",
+      "label": "*/**/*.ts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_keywords",
+      "label": "keywords",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_author",
+      "label": "author",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_license",
+      "label": "license",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_commitlint_cli",
+      "label": "@commitlint/cli",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_commitlint_config_conventional",
+      "label": "@commitlint/config-conventional",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_js",
+      "label": "@eslint/js",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_playwright_test",
+      "label": "@playwright/test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_types_js_yaml",
+      "label": "@types/js-yaml",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L31"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_types_node",
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L32"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint",
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_ascii",
+      "label": "eslint-plugin-ascii",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L34"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_jsonc",
+      "label": "eslint-plugin-jsonc",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_simple_import_sort",
+      "label": "eslint-plugin-simple-import-sort",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_unused_imports",
+      "label": "eslint-plugin-unused-imports",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L37"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_globals",
+      "label": "globals",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L38"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_husky",
+      "label": "husky",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_prettier",
+      "label": "prettier",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L40"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_typescript",
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L41"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_typescript_eslint",
+      "label": "typescript-eslint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L42"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies",
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L44"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_influxdata_influxdb_client",
+      "label": "@influxdata/influxdb-client",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L45"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_bson",
+      "label": "bson",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L46"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_dd_trace",
+      "label": "dd-trace",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L47"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_dotenv",
+      "label": "dotenv",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L48"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_js_yaml",
+      "label": "js-yaml",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L49"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_mongodb",
+      "label": "mongodb",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L50"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_tsx",
+      "label": "tsx",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L51"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_version",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_description",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_test_htmlreport",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_test_full",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_test_debug",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_test_e2e",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_type_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_prettier_format",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_prettier_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_lint_fix",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_lint_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_scripts_prepare",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_lint_staged",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_lint_staged",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_lint_staged_js_ts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_lint_staged",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_lint_staged_ts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_keywords",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_author",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_license",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_commitlint_cli",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_commitlint_cli",
+      "target": "commitlint_cli",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_commitlint_config_conventional",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_commitlint_config_conventional",
+      "target": "commitlint_config_conventional",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_js",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_js",
+      "target": "eslint_js",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_playwright_test",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_playwright_test",
+      "target": "playwright_test",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_types_js_yaml",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_types_js_yaml",
+      "target": "types_js_yaml",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_types_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_types_node",
+      "target": "types_node",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint",
+      "target": "eslint",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_ascii",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_ascii",
+      "target": "eslint_plugin_ascii",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_jsonc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_jsonc",
+      "target": "eslint_plugin_jsonc",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_simple_import_sort",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_simple_import_sort",
+      "target": "eslint_plugin_simple_import_sort",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_unused_imports",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_eslint_plugin_unused_imports",
+      "target": "eslint_plugin_unused_imports",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_globals",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_globals",
+      "target": "globals",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_husky",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_husky",
+      "target": "husky",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_prettier",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_prettier",
+      "target": "prettier",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_typescript",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_typescript",
+      "target": "typescript",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_typescript_eslint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_devdependencies_typescript_eslint",
+      "target": "typescript_eslint",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L42",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_influxdata_influxdb_client",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_influxdata_influxdb_client",
+      "target": "influxdata_influxdb_client",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_bson",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_bson",
+      "target": "bson",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L46",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_dd_trace",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_dd_trace",
+      "target": "dd_trace",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L47",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_dotenv",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_dotenv",
+      "target": "dotenv",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_js_yaml",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_js_yaml",
+      "target": "js_yaml",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L49",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_mongodb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_mongodb",
+      "target": "mongodb",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L50",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_tsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_package_dependencies_tsx",
+      "target": "tsx",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L51",
+      "weight": 1.0,
+      "context": "import"
+    }
+  ]
+}

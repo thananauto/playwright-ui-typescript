@@ -1,0 +1,39 @@
+{
+  "nodes": [
+    {
+      "id": "_claude_skills_playwright_cli_references_session_management_md_named_sessions",
+      "label": "Named Browser Sessions",
+      "file_type": "document",
+      "source_file": ".claude/skills/playwright-cli/references/session-management.md",
+      "source_location": "## Named Browser Sessions",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_playwright_cli_references_session_management_md_attach_cdp",
+      "label": "Attach to Running Browser via CDP",
+      "file_type": "concept",
+      "source_file": ".claude/skills/playwright-cli/references/session-management.md",
+      "source_location": "## Attaching to a Running Browser",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "_claude_skills_playwright_cli_references_session_management_md_named_sessions",
+      "target": "_claude_skills_playwright_cli_references_session_management_md_attach_cdp",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/playwright-cli/references/session-management.md",
+      "source_location": "## Attaching to a Running Browser",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": []
+}

@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {
+      "id": "github_workflows_docker_registry_yml_docker_registry_workflow",
+      "label": "Docker Registry GitHub Actions Workflow",
+      "file_type": "document",
+      "source_file": ".github/workflows/docker-registry.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [],
+  "hyperedges": []
+}

@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": "claude_skills_playwright_cli_references_tracing_md_tracing_reference",
+      "label": "Tracing Reference",
+      "file_type": "document",
+      "source_file": ".claude/skills/playwright-cli/references/tracing.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "claude_skills_playwright_cli_references_tracing_md_trace_file_format",
+      "label": "Trace File Format (.trace + .network + resources/)",
+      "file_type": "concept",
+      "source_file": ".claude/skills/playwright-cli/references/tracing.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "claude_skills_playwright_cli_references_tracing_md_tracing_reference",
+      "target": "claude_skills_playwright_cli_references_tracing_md_trace_file_format",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/playwright-cli/references/tracing.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_playwright_cli_references_tracing_md_tracing_reference",
+      "target": "claude_skills_playwright_cli_references_video_recording_md_video_recording_reference",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/playwright-cli/references/tracing.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "claude_skills_playwright_cli_references_tracing_md_trace_file_format",
+      "target": "claude_skills_playwright_cli_references_video_recording_md_screencast_overlay_api",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": ".claude/skills/playwright-cli/references/tracing.md",
+      "source_location": null,
+      "weight": 0.65
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "playwright_cli_debug_capture_tools",
+      "label": "Playwright CLI Debug and Capture Tools (Tracing + Video + Storage State)",
+      "nodes": [
+        "claude_skills_playwright_cli_references_tracing_md_tracing_reference",
+        "claude_skills_playwright_cli_references_video_recording_md_video_recording_reference",
+        "claude_skills_playwright_cli_references_storage_state_md_storage_management"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".claude/skills/playwright-cli/references/tracing.md"
+    }
+  ]
+}

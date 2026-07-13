@@ -1,0 +1,221 @@
+{
+  "nodes": [
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "label": ".prettierrc.json",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_singlequote",
+      "label": "singleQuote",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_jsxsinglequote",
+      "label": "jsxSingleQuote",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_tabwidth",
+      "label": "tabWidth",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_usetabs",
+      "label": "useTabs",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_trailingcomma",
+      "label": "trailingComma",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_printwidth",
+      "label": "printWidth",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_semi",
+      "label": "semi",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_arrowparens",
+      "label": "arrowParens",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_bracketspacing",
+      "label": "bracketSpacing",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_bracketsameline",
+      "label": "bracketSameLine",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_prosewrap",
+      "label": "proseWrap",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_quoteprops",
+      "label": "quoteProps",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_endofline",
+      "label": "endOfLine",
+      "file_type": "code",
+      "source_file": ".prettierrc.json",
+      "source_location": "L14"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_singlequote",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_jsxsinglequote",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_tabwidth",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_usetabs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_trailingcomma",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_printwidth",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_semi",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_arrowparens",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_bracketspacing",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_bracketsameline",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_prosewrap",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_quoteprops",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_json",
+      "target": "users_trajasekaran_documents_projects_workspace_js_workspace_javascript_workspace_saucelab_playwright_prettierrc_endofline",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".prettierrc.json",
+      "source_location": "L14",
+      "weight": 1.0
+    }
+  ]
+}

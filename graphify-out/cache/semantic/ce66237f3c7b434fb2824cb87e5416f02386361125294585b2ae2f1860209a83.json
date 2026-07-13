@@ -1,0 +1,387 @@
+{
+  "nodes": [
+    {
+      "id": "_claude_skills_graphify_skill_md_graphify_skill",
+      "label": "Graphify Skill",
+      "file_type": "document",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_skill_md_knowledge_graph_pipeline",
+      "label": "Knowledge Graph Pipeline",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "## What You Must Do When Invoked",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_skill_md_community_detection",
+      "label": "Community Detection",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_skill_md_god_nodes",
+      "label": "God Nodes",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_skill_md_ast_extraction",
+      "label": "AST Structural Extraction",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "#### Part A - Structural extraction for code files",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_skill_md_semantic_extraction",
+      "label": "Semantic Extraction (LLM)",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "#### Part B - Semantic extraction (parallel subagents)",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_skill_md_graph_query",
+      "label": "Graph Query (BFS/DFS Traversal)",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "## For /graphify query",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_skill_md_graph_report_md",
+      "label": "GRAPH_REPORT.md Output",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_skill_md_graph_json",
+      "label": "graph.json Output",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_skill_md_obsidian_vault",
+      "label": "Obsidian Vault Export",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 6",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_skill_md_html_visualization",
+      "label": "Interactive HTML Visualization",
+      "file_type": "concept",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 6",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "_claude_skills_graphify_skill_md_honesty_rules",
+      "label": "Graphify Honesty Rules",
+      "file_type": "rationale",
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "## Honesty Rules",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Never invent an edge; always show token cost; never hide cohesion scores; never run HTML viz on a graph with more than 5000 nodes without warning. Design intent: build trust through transparency and audit trails."
+    }
+  ],
+  "edges": [
+    {
+      "source": "_claude_skills_graphify_skill_md_graphify_skill",
+      "target": "_claude_skills_graphify_skill_md_knowledge_graph_pipeline",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "## What You Must Do When Invoked",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_graphify_skill",
+      "target": "_claude_skills_graphify_references_add_watch_md_graphify_add_url",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "## For /graphify add and --watch",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_graphify_skill",
+      "target": "_claude_skills_graphify_references_exports_md_wiki_export",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Steps 6b-8",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_graphify_skill",
+      "target": "_claude_skills_graphify_references_extraction_spec_md_extraction_subagent_prompt",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "#### Part B - Semantic extraction (parallel subagents)",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_graphify_skill",
+      "target": "_claude_skills_graphify_references_github_and_merge_md_github_clone",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 0 - GitHub repos and multi-path merge",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_graphify_skill",
+      "target": "_claude_skills_graphify_references_hooks_md_post_commit_hook",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "## For the commit hook and native CLAUDE.md integration",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_graphify_skill",
+      "target": "_claude_skills_graphify_references_query_md_bfs_traversal",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "## For /graphify query",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_graphify_skill",
+      "target": "_claude_skills_graphify_references_transcribe_md_whisper_transcription",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 2.5 - Video and audio",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_graphify_skill",
+      "target": "_claude_skills_graphify_references_update_md_incremental_update",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "## For --update and --cluster-only",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_knowledge_graph_pipeline",
+      "target": "_claude_skills_graphify_skill_md_ast_extraction",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "#### Part A",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_knowledge_graph_pipeline",
+      "target": "_claude_skills_graphify_skill_md_semantic_extraction",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "#### Part B",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_knowledge_graph_pipeline",
+      "target": "_claude_skills_graphify_skill_md_community_detection",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 4",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_knowledge_graph_pipeline",
+      "target": "_claude_skills_graphify_skill_md_god_nodes",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 4",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_knowledge_graph_pipeline",
+      "target": "_claude_skills_graphify_skill_md_graph_json",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 4",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_knowledge_graph_pipeline",
+      "target": "_claude_skills_graphify_skill_md_graph_report_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 4",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_knowledge_graph_pipeline",
+      "target": "_claude_skills_graphify_skill_md_html_visualization",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 6",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_knowledge_graph_pipeline",
+      "target": "_claude_skills_graphify_skill_md_obsidian_vault",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "### Step 6",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_honesty_rules",
+      "target": "_claude_skills_graphify_skill_md_knowledge_graph_pipeline",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "## Honesty Rules",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_graph_query",
+      "target": "_claude_skills_graphify_references_query_md_bfs_traversal",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "## For /graphify query",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_graph_query",
+      "target": "_claude_skills_graphify_references_query_md_dfs_traversal",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "## For /graphify query",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_ast_extraction",
+      "target": "_claude_skills_graphify_skill_md_semantic_extraction",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": "Part C - Merge AST + semantic",
+      "weight": 1.0
+    },
+    {
+      "source": "_claude_skills_graphify_skill_md_graphify_skill",
+      "target": "_claude_skills_playwright_cli_skill_md_playwright_cli_skill",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": ".claude/skills/graphify/SKILL.md",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "graphify_knowledge_graph_outputs",
+      "label": "Graphify Core Output Artifacts",
+      "nodes": [
+        "_claude_skills_graphify_skill_md_graph_json",
+        "_claude_skills_graphify_skill_md_graph_report_md",
+        "_claude_skills_graphify_skill_md_html_visualization"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md"
+    },
+    {
+      "id": "graphify_extraction_pipeline_parts",
+      "label": "Graphify Extraction Pipeline (AST + Semantic + Merge)",
+      "nodes": [
+        "_claude_skills_graphify_skill_md_ast_extraction",
+        "_claude_skills_graphify_skill_md_semantic_extraction",
+        "_claude_skills_graphify_references_extraction_spec_md_extraction_subagent_prompt"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/graphify/SKILL.md"
+    }
+  ]
+}
