@@ -36,4 +36,9 @@ export default class ProductCartPage {
     await expect(this.page.getByTestId('inventory-item')).not.toBeVisible()
     await expect(this.page.locator('.shopping_cart_badge')).not.toBeVisible()
   }
+
+  @Steps('Validate cart badge count')
+  async validateCartBadgeCount(count: number) {
+    await expect(this.page.locator('.shopping_cart_badge')).toHaveText(String(count))
+  }
 }

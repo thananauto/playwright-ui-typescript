@@ -7,6 +7,7 @@
 
   "TC02": {},
   "product": "Sauce Labs Onesie",
+  "products": ["Sauce Labs Onesie", "Sauce Labs Backpack", "Sauce Labs Bike Light"],
   "address": {
     "firstname": "hello",
     "lastname": "world",

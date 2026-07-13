@@ -56,4 +56,11 @@ export default class ProductInfo {
     const product = this.page.locator('.inventory_item', { hasText: item }).getByRole('button', { name: 'Add to cart' })
     await product.click()
   }
+
+  @Steps('Add multiple items to cart')
+  async addItemsToCart(items: string[]) {
+    for (const item of items) {
+      await this.clickAnItem(item)
+    }
+  }
 }

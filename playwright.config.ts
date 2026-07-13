@@ -26,7 +26,7 @@ export default defineConfig({
   reporter: [
     ['html', { outputFolder: `./playwright-report/${timestamp}` }],
     ['list'],
-    ['./custom_report/customreporter.ts'],
+    //['./custom_report/customreporter.ts'],
     //['@reportportal/agent-js-playwright', rpConfig],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -37,9 +37,9 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on',
     screenshot: 'only-on-failure',
-    proxy: {
-      server: process.env.PROXY_SERVER || 'http://localhost:8080',
-    },
+    // proxy: {
+    //  server: process.env.PROXY_SERVER || 'http://localhost:8080',
+    // },
     ignoreHTTPSErrors: true,
   },
   //globalSetup: require.resolve('./e2e/init/global-setup'),
@@ -51,8 +51,10 @@ export default defineConfig({
   projects: [
     {
       name: 'Sauce Demo - Chrome',
+
       use: {
         ...devices['Desktop Chrome'],
+        headless: false,
         channel: 'chrome',
         testIdAttribute: 'data-test',
         launchOptions: {
