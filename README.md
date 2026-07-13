@@ -18,6 +18,7 @@ automation.
 - [Live Test Execution with ReportPortal](#live-test-execution-with-reportportal)
 - [Code Quality with Husky](#code-quality-with-husky)
 - [Passive scanning with OWAS ZAP](#passive-scan-zap)
+- [Datadog Integration](#datadog-integration)
 - [Related Blogs & Resources](#related-blogs--resources)
 
 ## Getting Started
@@ -139,5 +140,6 @@ By using the Datadog Test Optimization and Real User Monitoring(RUM) with playwr
 - [Live Visualization of Test Results Using Playwright and InfluxDB 2.0](https://medium.com/@thananjayan1988/live-visualization-of-test-results-using-playwright-and-influxdb-2-0-2a193656dda2)
 - [CI/CD Pipeline: Running Playwright Tests in Jenkins with Docker](https://medium.com/@thananjayan1988/ci-cd-pipeline-running-playwright-tests-in-jenkins-with-docker-f9f08fda4bfc)
 - [Enhancing Playwright Test Reports with Decorators](https://medium.com/@thananjayan1988/how-to-enhance-the-playwright-html-report-using-test-step-with-typescript-decorator-4b45797a3031)
+- [How I Solved AI Context Bloat in a Test Automation Framework Using Graphify](https://medium.com/@thananjayan1988/how-i-solved-ai-context-bloat-in-a-test-automation-framework-using-graphify-606fc6373878)
 
 For a complete list of related blogs, check out [Medium](https://medium.com/@thananjayan1988).
